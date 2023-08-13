@@ -1,0 +1,47 @@
+// Desktop first
+
+@mixin vp-1365 {
+  @media (max-width: ($vp-1366 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1339 {
+  @media (max-width: ($vp-1340 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+
+@mixin h2-desktop {
+  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-size: 35px;
+  line-height: 100%;
+  margin: 0;
+}
+
+@mixin h2-tablet {
+  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 100%;
+  margin: 0;
+}
+
+@mixin h2-mobile {
+  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 100%;
+  margin: 0;
+}

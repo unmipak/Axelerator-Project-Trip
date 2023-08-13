@@ -1,0 +1,63 @@
+// Colors
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-elephant:                    #2d383f;
+$color-navy-blue:                   #0266c1;
+$color-resolution-blue:             #1c3374;
+$color-black-russian:               #030a1a;
+$color-torch-red:                   #ff121f;
+
+// Gradient
+
+$overlay-gradient-slider:           linear-gradient(143deg, rgba(15, 20, 41, 0.33) 0%, rgba(15, 20, 41, 0.00) 100%);
+$overlay-gradient-tours:            linear-gradient(0deg, rgba(0, 0, 0, 0.60) 61.90%, rgba(0, 0, 0, 0.00) 100%);
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default:                        16px;
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-rouble:                         "Rouble", "Arial", sans-serif;
+
+$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600:                         0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-375:                            375px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1200:                           1200px;
+$vp-1280:                           1280px;
+$vp-1340:                           1340px;
+$vp-1366:                           1366px;
+$vp-1440:                           1440px;
+$vp-1920:                           1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
