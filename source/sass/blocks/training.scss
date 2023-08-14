@@ -1,0 +1,42 @@
+.training {
+  background-color: $color-default-white;
+  padding: 0 120px 100px;
+
+  h2 {
+    @include h2-desktop;
+    margin-bottom: 58px;
+  }
+
+  p {
+    @include text-regular-desktop;
+    margin-bottom: 52px;
+  }
+}
+
+.training__slider {
+  h3 {
+    @include h3-desktop;
+    margin-bottom: 44px;
+  }
+}
+
+.training__process {
+  h3 {
+    @include h3-desktop;
+    margin-bottom: 45px;
+  }
+}
+
+.training__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.training__item {
+  width: 294px;
+}

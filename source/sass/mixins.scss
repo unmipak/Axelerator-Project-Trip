@@ -24,8 +24,35 @@
   }
 }
 
+@mixin h1-desktop {
+  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-size: 77px;
+  line-height: 100%;
+  margin: 0;
+  color: $color-default-white;
+  text-align: start;
+}
+
+@mixin h1-tablet {
+  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-size: 56px;
+  line-height: 100%;
+  margin: 0;
+  color: $color-default-white;
+  text-align: start;
+}
+
+@mixin h1-mobile {
+  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 100%;
+  margin: 0;
+  color: $color-default-white;
+  text-align: center;
+}
 
 @mixin h2-desktop {
+  color: $color-elephant;
   font-family: "Montserrat ExtraBold", "Arial", sans-serif;
   font-size: 35px;
   line-height: 100%;
@@ -33,6 +60,7 @@
 }
 
 @mixin h2-tablet {
+  color: $color-elephant;
   font-family: "Montserrat ExtraBold", "Arial", sans-serif;
   font-size: 25px;
   line-height: 100%;
@@ -40,8 +68,63 @@
 }
 
 @mixin h2-mobile {
+  color: $color-elephant;
   font-family: "Montserrat ExtraBold", "Arial", sans-serif;
   font-size: 22px;
   line-height: 100%;
+  margin: 0;
+}
+
+@mixin h3-desktop {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 100%;
+  margin: 0;
+  color: $color-elephant;
+}
+
+@mixin h3-tablet {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 100%;
+  margin: 0;
+  color: $color-elephant;
+}
+
+@mixin h3-mobile {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  margin: 0;
+  color: $color-elephant;
+}
+
+@mixin h3-desktop-light {
+  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  color: $color-default-white;
+}
+
+@mixin h3-mobile-light {
+  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  color: $color-default-white;
+}
+
+@mixin text-regular-desktop {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+
+@mixin text-small-desktop {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
   margin: 0;
 }

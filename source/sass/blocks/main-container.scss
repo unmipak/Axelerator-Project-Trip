@@ -1,11 +1,6 @@
 .main-container {
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
 
+}
 @include vp-1199 {
-  .main-container {
-    flex-direction: column;
-  }
+
 }

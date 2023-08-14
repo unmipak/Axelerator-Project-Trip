@@ -1,3 +1,28 @@
 .btn {
+  display: block;
+  width: fit-content;
+  padding: 21px;
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  color: $color-default-white;
+  background-color: $color-navy-blue;
+  border: none;
 
+  &:hover,
+  &:focus-visible {
+    background-color: $color-default-white;
+    color: $color-resolution-blue;
+    outline: 1px solid $color-resolution-blue;
+  }
+
+  &:active {
+    color: $color-default-white;
+    background-color: $color-resolution-blue;
+  }
+
+  &:disabled {
+    color: $color-default-white;
+    background-color: rgba(2, 102, 193, 0.1);
+  }
 }

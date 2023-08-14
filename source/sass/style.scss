@@ -1,7 +1,7 @@
 // Vendor
 
 @import "vendor/normalize";
-//@import "vendor/swiper";
+@import "vendor/swiper";
 //@import "vendor/data-accordion.scss";
 //@import "vendor/data-tabs.scss";
 
@@ -19,8 +19,15 @@
 @import "blocks/custom-input";
 @import "blocks/main-container";
 @import "blocks/header";
+@import "blocks/site-navigation";
 @import "blocks/hero";
+@import "blocks/hero-tour";
+@import "blocks/tours";
+@import "blocks/training";
+@import "blocks/instructors";
+@import "blocks/about-us";
 @import "blocks/advantages";
+@import "blocks/gallery";
 @import "blocks/reviews";
 @import "blocks/feedback";
 @import "blocks/contacts";

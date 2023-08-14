@@ -1,5 +1,62 @@
 .header {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding: 40px 120px 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.header__tel {
+  font-family: "Montserrat SemiBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 100%;
+  color: $color-default-white;
+  max-width: 142px;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+  }
+
+  &:disabled {
+    color: $color-default-white;
+    opacity: 10%;
+  }
+}
+
+.header__logo {
+  max-width: 205px;
+}
+
+.header__logo:focus-visible {
+  outline: none;
+}
+
+.header__logo svg {
+  fill: $color-default-white;
+}
+
+.header__logo:hover svg,
+.header__logo:focus-visible svg {
+  fill: $color-resolution-blue;
+}
+
+.header__logo:active svg {
+  fill: $color-navy-blue;
+}
+
+.header__nav {
+  max-width: 620px;
 }
 
 

@@ -1,0 +1,15 @@
+.gallery {
+  background-color: $color-default-white;
+  padding: 0 120px 0;
+  width: 100%;
+
+  h2 {
+    @include h2-desktop;
+    margin-bottom: 27px;
+  }
+
+  p {
+    @include text-regular-desktop;
+    margin-bottom: 45px;
+  }
+}

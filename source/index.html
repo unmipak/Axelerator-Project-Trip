@@ -19,89 +19,115 @@
 
 <body>
   <div class="wrapper">
-    <header class="header swiper">
-      <div class="header__wrapper">
-        <a class="header__logo " href="index.html" aria-label="Логотип">
-          <svg width="205" height="62">
-            <use xlink:href="./img/stack.svg#logotype-desktop" />
-          </svg>
-        </a>
-        <nav class="header__nav site-navigation">
-          <ul class="site-navigation__list">
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="#hero">Туры</a>
-            </li>
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="#training">Обучение</a>
-            </li>
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="#about-us">О нас</a>
-            </li>
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="#reviews">Отзывы</a>
-            </li>
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="#gallery">Фотографии</a>
-            </li>
-            <li class="site-navigation__item">
-              <a class="site-navigation__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-          <a class="header__tel" href="tel:+78007253232">8-800-725-32-32</a>
-        </nav>
-      </div>
-      <section class="hero swiper-wrapper">
-        <div class="swiper-slide tour tour-1">
-          <div class="tour__info">
-            <h1>Захватывающие вершины Кавказа</h1>
-            <p>В сопровождении опытных гидов вы пройдете через потрясающие ландшафты и совершите восход на вершину
-              горы Чегет.</p>
-            <a class="hero__btn btn" href="#">Смотреть тур</a>
-          </div>
-          <div class="tour__details">
-            <span class="tour__duration">6 дней/5 ночей</span>
-            <span class="tour__level">Высокая сложность</span>
-          </div>
-          <div class="tour__video">
-            <video></video>
-          </div>
-        </div>
-        <div class="swiper-slide tour tour-2">
-          <div class="tour__info">
-            <h1>Невероятная природа Камчатки</h1>
-            <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
-              нетронутых уголков дикой природы в мире.</p>
-            <a class="hero__btn btn" href="#">Смотреть тур</a>
-          </div>
-          <div class="tour__details">
-            <span class="tour__duration">9 дней/10 ночей</span>
-            <span class="tour__level">Средняя сложность</span>
-          </div>
-          <div class="tour__photos">
-          </div>
-        </div>
-        <div class="swiper-slide tour tour-3">
-          <div class="tour__info">
-            <h1>Магические пейзажи Алтайского Края</h1>
-            <p>Алтайский трекинг-тур – это захватывающее приключение с посещением магических и захватывающих дух
-              ландшафтов Алтайских гор.</p>
-            <a class="hero__btn btn" href="#">Смотреть тур</a>
-          </div>
-          <div class="tour__details">
-            <span class="tour__duration">8 дней/7 ночей</span>
-            <span class="tour__level">Легкая сложность</span>
-            <div class="tour__audio-player">
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </section>
+    <header class="header">
+      <a class="header__logo" href="index.html" aria-label="Логотип">
+        <svg width="205" height="62">
+          <use xlink:href="./img/stack.svg#logotype-desktop" />
+        </svg>
+      </a>
+      <nav class="header__nav site-navigation site-navigation--light">
+        <ul class="site-navigation__list">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#hero">Туры</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#training">Обучение</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#about-us">О нас</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#gallery">Фотографии</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__tel" href="tel:+78007253232">8 800 725 32 32</a>
     </header>
     <main class="main-container">
+      <section class="hero swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero-tour hero-tour--1">
+            <div class="hero-tour__info">
+              <h1>Захватывающие вершины Кавказа</h1>
+              <p>В сопровождении опытных гидов вы пройдете через потрясающие ландшафты и совершите восход на вершину
+                горы Чегет.</p>
+              <a class="hero-tour__btn btn" href="#">Смотреть тур</a>
+            </div>
+            <ul class="hero-tour__details">
+              <li class="hero-tour__item hero-tour__item--duration">
+                <p>6 дней/5 ночей</p>
+              </li>
+              <li class="hero-tour__item hero-tour__item--level">
+                <p>Высокая сложность</p>
+              </li>
+            </ul>
+            <div class="hero-tour__video">
+              <video width="482" height="317" poster="./img/video-desktop.jpg">
+                <source src="./img/video.mp4">
+              </video>
+              <button class="hero-tour__video-btn" type="button"></button>
+            </div>
+          </div>
+          <div class="swiper-slide hero-tour hero-tour--2">
+            <div class="hero-tour__info">
+              <h1>Невероятная природа Камчатки</h1>
+              <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
+                нетронутых уголков дикой природы в мире.</p>
+              <a class="hero-tour__btn btn" href="#">Смотреть тур</a>
+            </div>
+            <ul class="hero-tour__details">
+              <li class="hero-tour__item hero-tour__item--duration">
+                <p>9 дней/10 ночей</p>
+              </li>
+              <li class="hero-tour__item hero-tour__item--level">
+                <p>Средняя сложность</p>
+              </li>
+            </ul>
+            <div class="hero-tour__photos">
+            </div>
+          </div>
+          <div class="swiper-slide hero-tour hero-tour--3">
+            <div class="hero-tour__info">
+              <h1>Магические пейзажи Алтайского Края</h1>
+              <p>Алтайский трекинг-тур – это захватывающее приключение с посещением магических и захватывающих дух
+                ландшафтов Алтайских гор.</p>
+              <a class="hero-tour__btn btn" href="#">Смотреть тур</a>
+            </div>
+            <ul class="hero-tour__details">
+              <li class="hero-tour__item hero-tour__item--duration">
+                <p>8 дней/7 ночей</p>
+              </li>
+              <li class="hero-tour__item hero-tour__item--level">
+                <p>Легкая сложность</p>
+              </li>
+            </ul>
+            <div class="hero-tour__audio-player"></div>
+          </div>
+        </div>
+        <div class="hero__pagination swiper-pagination"></div>
+      </section>
       <section class="tours swiper" id="tours">
         <h2 data-title="Ближайшие туры">Ближайшие туры</h2>
         <div class="tours__slider swiper-wrapper">
           <div class="tours__slide tours__slide--elbrus swiper-slide">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/elbrus-mobile.webp, ./img/elbrus-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/elbrus-tablet.webp, ./img/elbrus-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/elbrus-desktop.webp, ./img/elbrus-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/elbrus-mobile.jpg, ./img/elbrus-mobile@2x.jpg 2x"
+                  width="290" height="412">
+                <source media="(max-width: 1199px)"
+                  srcset="./img/elbrus-tablet.jpg, ./img/elbrus-tablet@2x.jpg 2x" width="324" height="412">
+              <img class="tours__picture" src="./img/elbrus-desktop.jpg" width="380" height="412" srcset="./img/elbrus-desktop@2x.jpg 2x" alt="Фото локации">
+            </picture>
             <ul class="tours__info">
               <li class="tours__location">
                 <p>Кавказ</p>
@@ -130,6 +156,18 @@
             </dl>
           </div>
           <div class="tours__slide tours__slide--belukha swiper-slide">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/belukha-mobile.webp, ./img/belukha-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/belukha-tablet.webp, ./img/belukha-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/belukha-desktop.webp, ./img/belukha-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/belukha-mobile.jpg, ./img/belukha-mobile@2x.jpg 2x"
+                  width="290" height="412">
+                <source media="(max-width: 1199px)"
+                  srcset="./img/belukha-tablet.jpg, ./img/belukha-tablet@2x.jpg 2x" width="324" height="412">
+              <img class="tours__picture" src="./img/belukha-desktop.jpg" width="380" height="412" srcset="./img/belukha-desktop@2x.jpg 2x" alt="Фото локации">
+            </picture>
             <ul class="tours__info">
               <li class="tours__location">
                 <p>Алтай</p>
@@ -157,7 +195,19 @@
               </div>
             </dl>
           </div>
-          <div class="tours__slide tours__slide--belukha swiper-slide">
+          <div class="tours__slide tours__slide--fisht swiper-slide">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/fisht-mobile.webp, ./img/fisht-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/fisht-tablet.webp, ./img/fisht-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/fisht-desktop.webp, ./img/fisht-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/fisht-mobile.jpg, ./img/fisht-mobile@2x.jpg 2x"
+                  width="290" height="412">
+                <source media="(max-width: 1199px)"
+                  srcset="./img/fisht-tablet.jpg, ./img/fisht-tablet@2x.jpg 2x" width="324" height="412">
+              <img class="tours__picture" src="./img/fisht-desktop.jpg" width="380" height="412" srcset="./img/fisht-desktop@2x.jpg 2x" alt="Фото локации">
+            </picture>
             <ul class="tours__info">
               <li class="tours__location">
                 <p>Адыгея</p>
@@ -186,18 +236,18 @@
             </dl>
           </div>
         </div>
-        <div class="swiper-button-prev tours__btn-prev" aria-label="Назад"></div>
-        <div class="swiper-button-next tours__btn-next" aria-label="Вперед"></div>
+        <div class="tours__btn-prev swiper-button-prev" aria-label="Назад"></div>
+        <div class="tours__btn-next swiper-button-next" aria-label="Вперед"></div>
         <a class="tours__link href=#">Показать все туры</a>
       </section>
       <section class="training" id="training">
         <h2 data-title="Обучение">Обучение</h2>
         <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов
           Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
-        <div class="instructors swiper">
+        <div class="training__slider instructors swiper">
           <h3>Наши инструкторы</h3>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="instructors__btn-prev swiper-button-prev"></div>
+          <div class="instructors__btn-next swiper-button-next"></div>
           <div class="swiper-wrapper">
             <div class="instructors__slide instructors__slide--prokofyev swiper-slide">
               <picture>
@@ -279,19 +329,19 @@
             </div>
           </div>
         </div>
-        <div class="training-process">
+        <div class="training__process">
           <h3>Процесс обучения</h3>
-          <ol class="training-process__list">
-            <li class="training-process__item training-process__item--route">
+          <ol class="training__list">
+            <li class="training__item training__item--route">
               <p>Изучение спортивного туристского движения</p>
             </li>
-            <li class="training-process__item training-process__item--equipment">
+            <li class="training__item training__item--equipment">
               <p>Подготовка и техническое снаряжение в походах</p>
             </li>
-            <li class="training-process__item training-process__item--nature">
+            <li class="training__item training__item--nature">
               <p>Лекции по окружающей среде, экологии и гигиене</p>
             </li>
-            <li class="training-process__item training-process__item--danger">
+            <li class="training__item training__item--danger">
               <p>Разъяснение сложности горных препятствий</p>
             </li>
           </ol>
@@ -435,6 +485,23 @@
           </li>
         </ul>
       </section>
+      <section class="gallery" id="gallery">
+        <h2>Фотогалерея</h2>
+        <p>Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
+        <div class="gallery__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="gallery__photo swiper-slide"></div>
+            <div class="gallery__photo swiper-slide"></div>
+            <div class="gallery__photo swiper-slide"></div>
+            <div class="gallery__photo swiper-slide"></div>
+            <div class="gallery__photo swiper-slide"></div>
+            <div class="gallery__photo swiper-slide"></div>
+            <div class="gallery__photo swiper-slide"></div>
+          </div>
+          <div class="gallery__btn-prev swiper-button-prev"></div>
+          <div class="gallery__btn-next swiper-button-next"></div>
+        </div>
+      </section>
       <section class="feedback">
         <h2>Остались вопросы?</h2>
         <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
@@ -480,7 +547,7 @@
           <use xlink:href="./img/stack.svg#logotype-desktop" />
         </svg>
       </a>
-      <nav class="footer__nav site-navigation">
+      <nav class="footer__nav site-navigation site-navigation--dark">
         <ul class="site-navigation__list">
           <li class="site-navigation__item">
             <a class="site-navigation__link" href="#hero">Туры</a>
@@ -501,8 +568,8 @@
             <a class="site-navigation__link" href="#contacts">Контакты</a>
           </li>
         </ul>
-        <a class="footer" href="tel:+78007253232">8-800-725-32-32</a>
       </nav>
+      <a class="footer__tel" href="tel:+78007253232">8 800 725 32 32</a>
       <ul class="social-list">
         <li class="social-list__item">
           <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"
@@ -530,8 +597,8 @@
     </footer>
   </div>
 
-  <!--<script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script>-->
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

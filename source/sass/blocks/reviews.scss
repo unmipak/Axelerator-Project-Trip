@@ -1,5 +1,11 @@
 .reviews {
+  background-color: $color-default-white;
+  padding: 0 120px 113px;
 
+  h2 {
+    @include h2-desktop;
+    margin-bottom: 31px;
+  }
 }
 
 

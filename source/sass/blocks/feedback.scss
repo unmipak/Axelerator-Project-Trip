@@ -1,5 +1,32 @@
 .feedback {
+  padding: 308px 231px 307px;
+  background-color: $color-elephant;
+  background-image: url("../img/background-feedback.jpg");
+  background-size: cover;
 
+  h2 {
+    text-align: center;
+    @include h2-desktop;
+    color: $color-default-white;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+    @include text-regular-desktop;
+    color: $color-default-white;
+    margin-bottom: 42px;
+  }
+}
+
+.feedback__wrapper {
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 @include vp-1199 {
