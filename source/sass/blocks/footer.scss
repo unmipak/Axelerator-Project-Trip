@@ -39,21 +39,7 @@
   line-height: 100%;
   color: $color-elephant;
   max-width: 150px;
-
-  &:hover,
-  &:focus-visible {
-    color: $color-resolution-blue;
-    outline: none;
-  }
-
-  &:active {
-    color: $color-navy-blue;
-  }
-
-  &:disabled {
-    color: $color-navy-blue;
-    opacity: 10%;
-  }
+  @include link-style;
 }
 
 .footer__link {
@@ -63,23 +49,7 @@
   font-size: 12px;
   line-height: 100%;
   color: $color-elephant;
-
-  &:hover,
-  &:focus-visible {
-    color: $color-resolution-blue;
-    outline: none;
-  }
-
-  &:active {
-    color: $color-navy-blue;
-    opacity: 100%;
-  }
-
-  &:disabled {
-    color: $color-navy-blue;
-    opacity: 10%;
-  }
-
+  @include link-style;
 }
 
 

@@ -11,42 +11,13 @@
 }
 
 .social-list__link {
+  @include link-icon;
   width: 30px;
   height: 30px;
   border: 1px solid rgb(45, 56, 63, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
-
-  svg {
-    fill: $color-elephant;
-    display: block;
-    margin: auto;
-  }
-
-  &:hover,
-  &:focus-visible {
-    border: 1px solid $color-elephant;
-    outline: none;
-  }
-
-  &:active {
-    border: 1px solid $color-navy-blue;
-    background: $color-navy-blue;
-  }
-
-  &:active svg {
-    fill: $color-default-white;
-  }
-
-  &:disabled {
-    border: 1px solid rgb(45, 56, 63, 0.3);
-    background: none;
-  }
-
-  &:disabled svg {
-    fill: rgb(45, 56, 63, 0.3);
-  }
 }
 
 @include vp-767 {

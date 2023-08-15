@@ -1,6 +1,6 @@
 .training {
-  background-color: $color-default-white;
-  padding: 0 120px 100px;
+  padding: 0 120px 32px;
+  border-bottom: 1px solid $color-navy-blue;
 
   h2 {
     @include h2-desktop;
@@ -10,20 +10,14 @@
   p {
     @include text-regular-desktop;
     margin-bottom: 52px;
-  }
-}
-
-.training__slider {
-  h3 {
-    @include h3-desktop;
-    margin-bottom: 44px;
+    max-width: 820px;
   }
 }
 
 .training__process {
   h3 {
     @include h3-desktop;
-    margin-bottom: 45px;
+    margin: 49px 0 45px;
   }
 }
 
@@ -38,5 +32,51 @@
 }
 
 .training__item {
+  position: relative;
   width: 294px;
+  padding-left: 40px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--route::before {
+    background-image: url("../img/stack.svg#map");
+  }
+
+  &--equipment::before {
+    background-image: url("../img/stack.svg#boots");
+  }
+
+  &--nature::before {
+    background-image: url("../img/stack.svg#pine-tree");
+  }
+
+  &--danger::before {
+    background-image: url("../img/stack.svg#mountain");
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background: $color-navy-blue;
+    width: 14px;
+    height: 14px;
+    bottom: -40px;
+    left: 0;
+  }
+
+  p {
+    margin: 0;
+  }
 }

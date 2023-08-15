@@ -57,6 +57,21 @@
   font-size: 35px;
   line-height: 100%;
   margin: 0;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: attr(data-title);
+    font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+    font-size: 55px;
+    line-height: 100%;
+    color: $color-elephant;
+    opacity: 3%;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+  }
 }
 
 @mixin h2-tablet {
@@ -100,7 +115,7 @@
 }
 
 @mixin h3-desktop-light {
-  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-family: "Montserrat Bold", "Arial", sans-serif;
   font-size: 24px;
   line-height: 28px;
   margin: 0;
@@ -108,11 +123,19 @@
 }
 
 @mixin h3-mobile-light {
-  font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+  font-family: "Montserrat Bold", "Arial", sans-serif;
   font-size: 20px;
   line-height: 24px;
   margin: 0;
   color: $color-default-white;
+}
+
+@mixin h4-desktop {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  color: $color-elephant;
 }
 
 @mixin text-regular-desktop {
@@ -128,3 +151,181 @@
   line-height: 22px;
   margin: 0;
 }
+
+@mixin text-xsmall-desktop {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.tours__btn-prev,
+.tours__btn-next {
+  margin: 0;
+  box-sizing: border-box;
+  top: 100px;
+  background: $color-navy-blue;
+  width: 37px;
+  height: 35px;
+
+  &::after {
+    content: "";
+    width: 13px;
+    height: 8px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: $color-default-white;
+    border: 1px solid $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
+    background: $color-resolution-blue;
+  }
+
+  &:disabled {
+    background: $color-resolution-blue;
+    opacity: 10%;
+  }
+}
+
+@mixin btn-next {
+  margin: 0;
+  box-sizing: border-box;
+  background: $color-navy-blue;
+  width: 37px;
+  height: 35px;
+
+  &::after {
+    content: "";
+    width: 13px;
+    height: 8px;
+    background-image: url(../img/stack.svg#arrow-right);
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: $color-default-white;
+    border: 1px solid $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
+    background: $color-resolution-blue;
+  }
+
+  &:disabled {
+    background: $color-resolution-blue;
+    opacity: 10%;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-image: url(../img/stack.svg#arrow-right-hover);
+    background-repeat: no-repeat;
+  }
+
+  &:active::after,
+  &:disabled::after {
+    background-image: url(../img/stack.svg#arrow-right);
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin btn-prev {
+  margin: 0;
+  box-sizing: border-box;
+  background: $color-navy-blue;
+  width: 37px;
+  height: 35px;
+
+  &::after {
+    content: "";
+    width: 13px;
+    height: 8px;
+    background-image: url(../img/stack.svg#arrow-left);
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: $color-default-white;
+    border: 1px solid $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
+    background: $color-resolution-blue;
+  }
+
+  &:disabled {
+    background: $color-resolution-blue;
+    opacity: 10%;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-image: url(../img/stack.svg#arrow-left-hover);
+    background-repeat: no-repeat;
+  }
+
+  &:active::after,
+  &:disabled::after {
+    background-image: url(../img/stack.svg#arrow-left);
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin link-icon {
+  svg {
+    fill: $color-elephant;
+    display: block;
+    margin: auto;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border: 1px solid $color-elephant;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid $color-navy-blue;
+    background: $color-navy-blue;
+  }
+
+  &:active svg {
+    fill: $color-default-white;
+  }
+
+  &:disabled {
+    border: 1px solid rgb(45, 56, 63, 0.3);
+    background: none;
+  }
+
+  &:disabled svg {
+    fill: rgb(45, 56, 63, 0.3);
+  }
+}
+
+@mixin link-style {
+  &:hover,
+  &:focus-visible {
+    color: $color-resolution-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-navy-blue;
+    opacity: 100%;
+  }
+
+  &:disabled {
+    color: $color-navy-blue;
+    opacity: 10%;
+  }
+}
+

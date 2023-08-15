@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  &::after {
+  &::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -13,6 +13,7 @@
     background: $overlay-gradient-slider;
     top: 0;
     left: 0;
+    z-index: 0;
   }
 
   &--1 {
@@ -106,7 +107,6 @@
   position: absolute;
   top: 301px;
   right: 120px;
-  z-index: 1;
 
   video {
     position: relative;
@@ -130,11 +130,11 @@
   bottom: 130px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
   cursor: pointer;
+  z-index: 3;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     background-image: url("../img/stack.svg#video-play-hover");
     outline: none;
   }

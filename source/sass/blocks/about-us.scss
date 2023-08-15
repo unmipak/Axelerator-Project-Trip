@@ -1,6 +1,6 @@
 .about-us {
-  background-color: $color-default-white;
-  padding: 0 120px 70px 735px;
+  position: relative;
+  padding: 107px 120px 70px 735px;
 
   h2 {
     @include h2-desktop;
@@ -15,5 +15,35 @@
   p {
     @include text-small-desktop;
     margin-bottom: 26px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -71px;
+    right: -222px;
+    width: 840px;
+    height: 280px;
+    background-image: url(../img/clouds-decoration.png);
+    background-color: $color-default-white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 95px;
+    left: 0;
+    width: 808px;
+    height: 474px;
+    background-image: url(../img/background-about-us-desktop.png);
+    background-color: $color-default-white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
   }
 }

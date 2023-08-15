@@ -1,5 +1,19 @@
 .main-container {
+  position: relative;
 
+  &::after {
+    position: absolute;
+    content: "";
+    width: 602px;
+    height: 1364px;
+    top: 782px;
+    right: 0;
+    background-image: url("../img/clouds-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+  }
 }
 @include vp-1199 {
 

@@ -1,29 +1,106 @@
 .advantages {
-  background-color: $color-default-white;
   padding: 0 120px 107px;
   width: 100%;
 
   h2 {
     @include h2-desktop;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     margin-bottom: 51px;
+    text-align: center;
   }
 }
 
-.advantages__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.advantages__slider {
+  position: relative;
+  padding-bottom: 85px;
 }
 
-.advantages__item {
-  padding: 0;
+.advantages__slide {
+  position: relative;
+  min-width: 380px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(2, 102, 193, 0.10);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 54px;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    border: 1px solid $color-navy-blue;
+  }
+
+  &--security::after {
+    background-image: url("../img/stack.svg#security");
+  }
+
+  &--expertise::after {
+    background-image: url("../img/stack.svg#crown");
+  }
+
+  &--equipment::after {
+    background-image: url("../img/stack.svg#boots-blue");
+  }
+
+  &--route::after {
+    background-image: url("../img/stack.svg#route");
+  }
+
+  &--eco::after {
+    background-image: url("../img/stack.svg#leaf");
+  }
+
+  h3 {
+    width: 100%;
+    margin: 0;
+    padding: 84px 0 15px;
+    text-align: center;
+    font-family: "Montserrat SemiBold", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+    color: $color-elephant;
+  }
+
+  p {
+    @include text-small-desktop;
+    text-align: center;
+  }
+}
+
+.advantages__btn-next {
+  top: auto;
+  bottom: 0;
+  right: 46%;
+  left: auto;
+  @include btn-next;
+}
+
+.advantages__btn-prev {
+  top: auto;
+  bottom: 0;
+  left: 46%;
+  right: auto;
+  @include btn-prev;
 }
 
 
 @include vp-1199 {
-  .advantages {
-    padding: 0;
-  }
+  .advantages {}
 }
 
 @include vp-767 {

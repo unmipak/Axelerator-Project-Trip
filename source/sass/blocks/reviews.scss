@@ -8,11 +8,61 @@
   }
 }
 
-
-@include vp-1199 {
-
+.reviews__slider {
+  position: relative;
 }
 
-@include vp-767 {
-
+.reviews__slide {
+  min-width: 790px;
+  padding: 20px 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 30px;
+  background: $color-default-white;
+  box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.10);
 }
+
+.reviews__info {
+  width: 420px;
+  flex-grow: 1;
+
+  p {
+    @include text-small-desktop;
+  }
+
+  h3 {
+    font-family: "Montserrat Bold", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 100%;
+    margin: 24px 0 8px;
+    color: $color-elephant;
+  }
+
+  h4 {
+    font-family: "Montserrat Light", "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 100%;
+    margin: 0;
+    color: $color-elephant;
+  }
+}
+
+.reviews__btn-next {
+  @include btn-next;
+  top: 0;
+  right: 0;
+  left: auto;
+}
+
+.reviews__btn-prev {
+  @include btn-prev;
+  top: 0;
+  right: 41px;
+  left: auto;
+}
+
+
+@include vp-1199 {}
+
+@include vp-767 {}
