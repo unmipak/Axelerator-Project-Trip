@@ -8,7 +8,6 @@
   <meta name="description" content="Описание проекта">
   <title>Путешествия</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="icon" href="./img/svg/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -26,6 +25,7 @@
         </svg>
       </a>
       <nav class="header__nav site-navigation site-navigation--light">
+        <button class="header__nav-btn"></button>
         <ul class="site-navigation__list">
           <li class="site-navigation__item">
             <a class="site-navigation__link" href="#hero">Туры</a>
@@ -52,62 +52,56 @@
     <main class="main-container">
       <section class="hero swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide hero-tour hero-tour--1">
-            <div class="hero-tour__info">
-              <h1>Захватывающие вершины Кавказа</h1>
-              <p>В сопровождении опытных гидов вы пройдете через потрясающие ландшафты и совершите восход на вершину
-                горы Чегет.</p>
-              <a class="hero-tour__btn btn" href="#">Смотреть тур</a>
-            </div>
-            <ul class="hero-tour__details">
-              <li class="hero-tour__item hero-tour__item--duration">
+          <div class="hero__slide hero__slide--1 swiper-slide">
+            <h1>Захватывающие вершины Кавказа</h1>
+            <p>В сопровождении опытных гидов вы пройдете через потрясающие ландшафты и совершите восход на вершину
+              горы Чегет.</p>
+            <a class="hero__btn btn" href="#">Смотреть тур</a>
+            <ul class="hero__details">
+              <li class="hero__item hero__item--duration">
                 <p>6 дней/5 ночей</p>
               </li>
-              <li class="hero-tour__item hero-tour__item--level">
+              <li class="hero__item hero__item--level">
                 <p>Высокая сложность</p>
               </li>
             </ul>
-            <div class="hero-tour__video">
+            <div class="hero__video">
               <video width="482" height="317" poster="./img/video-desktop.jpg">
                 <source src="./img/video.mp4">
               </video>
-              <button class="hero-tour__video-btn" type="button"></button>
+              <button class="hero__video-btn" type="button"></button>
             </div>
           </div>
-          <div class="swiper-slide hero-tour hero-tour--2">
-            <div class="hero-tour__info">
-              <h1>Невероятная природа Камчатки</h1>
-              <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
-                нетронутых уголков дикой природы в мире.</p>
-              <a class="hero-tour__btn btn" href="#">Смотреть тур</a>
-            </div>
-            <ul class="hero-tour__details">
-              <li class="hero-tour__item hero-tour__item--duration">
+          <div class="hero__slide hero__slide--2 swiper-slide">
+            <h1>Невероятная природа Камчатки</h1>
+            <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
+              нетронутых уголков дикой природы в мире.</p>
+            <a class="hero__btn btn" href="#">Смотреть тур</a>
+            <ul class="hero__details">
+              <li class="hero__item hero__item--duration">
                 <p>9 дней/10 ночей</p>
               </li>
-              <li class="hero-tour__item hero-tour__item--level">
+              <li class="hero__item hero__item--level">
                 <p>Средняя сложность</p>
               </li>
             </ul>
-            <div class="hero-tour__photos">
+            <div class="hero__photos">
             </div>
           </div>
-          <div class="swiper-slide hero-tour hero-tour--3">
-            <div class="hero-tour__info">
-              <h1>Магические пейзажи Алтайского Края</h1>
-              <p>Алтайский трекинг-тур – это захватывающее приключение с посещением магических и захватывающих дух
-                ландшафтов Алтайских гор.</p>
-              <a class="hero-tour__btn btn" href="#">Смотреть тур</a>
-            </div>
-            <ul class="hero-tour__details">
-              <li class="hero-tour__item hero-tour__item--duration">
+          <div class="hero__slide hero__slide--3 swiper-slide">
+            <h1>Магические пейзажи Алтайского Края</h1>
+            <p>Алтайский трекинг-тур – это захватывающее приключение с посещением магических и захватывающих дух
+              ландшафтов Алтайских гор.</p>
+            <a class="hero__btn btn" href="#">Смотреть тур</a>
+            <ul class="hero__details">
+              <li class="hero__item hero__item--duration">
                 <p>8 дней/7 ночей</p>
               </li>
-              <li class="hero-tour__item hero-tour__item--level">
+              <li class="hero__item hero__item--level">
                 <p>Легкая сложность</p>
               </li>
             </ul>
-            <div class="hero-tour__audio-player"></div>
+            <div class="hero__audio-player"></div>
           </div>
         </div>
         <div class="hero__pagination swiper-pagination"></div>
@@ -522,17 +516,107 @@
       </section>
       <section class="gallery" id="gallery">
         <h2 data-title="Фотогалерея">Фотогалерея</h2>
-        <p>Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото. Лучшие фотографии украсят
-          этот раздел нашего сайта.</p>
         <div class="gallery__slider swiper">
+          <p>Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото. Лучшие фотографии украсят
+            этот раздел нашего сайта.</p>
           <div class="swiper-wrapper">
-            <div class="gallery__photo swiper-slide"></div>
-            <div class="gallery__photo swiper-slide"></div>
-            <div class="gallery__photo swiper-slide"></div>
-            <div class="gallery__photo swiper-slide"></div>
-            <div class="gallery__photo swiper-slide"></div>
-            <div class="gallery__photo swiper-slide"></div>
-            <div class="gallery__photo swiper-slide"></div>
+            <div class="gallery__slide swiper-slide">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/gallery-image-1.webp, ./img/gallery-image-1@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/gallery-image-1.webp, ./img/gallery-image-1@2x.webp 2x">
+                <source type="image/webp" srcset="./img/gallery-image-1.webp, ./img/gallery-image-1@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/gallery-image-1.jpg, ./img/gallery-image-1@2x.jpg 2x"
+                  width="159" height="259">
+                <source media="(max-width: 1199px)" srcset="./img/gallery-image-1.jpg, ./img/gallery-image-1@2x.jpg 2x"
+                  width="275" height="449">
+                <img src="./img/gallery-image-1.jpg" width="275" height="449" srcset="./img/gallery-image-1@2x.jpg 2x"
+                  alt="Фото из галлереи">
+              </picture>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/gallery-image-2.webp, ./img/gallery-image-2@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/gallery-image-2.webp, ./img/gallery-image-2@2x.webp 2x">
+                <source type="image/webp" srcset="./img/gallery-image-2.webp, ./img/gallery-image-2@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/gallery-image-2.jpg, ./img/gallery-image-2@2x.jpg 2x"
+                  width="172" height="103">
+                <source media="(max-width: 1199px)" srcset="./img/gallery-image-2.jpg, ./img/gallery-image-2@2x.jpg 2x"
+                  width="298" height="179">
+                <img src="./img/gallery-image-2.jpg" width="298" height="179" srcset="./img/gallery-image-2@2x.jpg 2x"
+                  alt="Фото из галлереи">
+              </picture>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/gallery-image-3.webp, ./img/gallery-image-3@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/gallery-image-3.webp, ./img/gallery-image-3@2x.webp 2x">
+                <source type="image/webp" srcset="./img/gallery-image-3.webp, ./img/gallery-image-3@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/gallery-image-3.jpg, ./img/gallery-image-3@2x.jpg 2x"
+                  width="172" height="153">
+                <source media="(max-width: 1199px)" srcset="./img/gallery-image-3.jpg, ./img/gallery-image-3@2x.jpg 2x"
+                  width="298" height="265">
+                <img src="./img/gallery-image-3.jpg" width="298" height="265" srcset="./img/gallery-image-3@2x.jpg 2x"
+                  alt="Фото из галлереи">
+              </picture>
+            </div>
+            <div class="gallery__slide swiper-slide">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/gallery-image-4.webp, ./img/gallery-image-4@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/gallery-image-4.webp, ./img/gallery-image-4@2x.webp 2x">
+                <source type="image/webp" srcset="./img/gallery-image-4.webp, ./img/gallery-image-4@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/gallery-image-4.jpg, ./img/gallery-image-4@2x.jpg 2x"
+                  width="159" height="259">
+                <source media="(max-width: 1199px)" srcset="./img/gallery-image-4.jpg, ./img/gallery-image-4@2x.jpg 2x"
+                  width="272" height="449">
+                <img src="./img/gallery-image-4.jpg" width="272" height="449" srcset="./img/gallery-image-4@2x.jpg 2x"
+                  alt="Фото из галлереи">
+              </picture>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/gallery-image-5.webp, ./img/gallery-image-5@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/gallery-image-5.webp, ./img/gallery-image-5@2x.webp 2x">
+                <source type="image/webp" srcset="./img/gallery-image-5.webp, ./img/gallery-image-5@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/gallery-image-5.jpg, ./img/gallery-image-5@2x.jpg 2x"
+                  width="172" height="103">
+                <source media="(max-width: 1199px)" srcset="./img/gallery-image-5.jpg, ./img/gallery-image-5@2x.jpg 2x"
+                  width="298" height="179">
+                <img src="./img/gallery-image-5.jpg" width="298" height="179" srcset="./img/gallery-image-5@2x.jpg 2x"
+                  alt="Фото из галлереи">
+              </picture>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/gallery-image-6.webp, ./img/gallery-image-6@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/gallery-image-6.webp, ./img/gallery-image-6@2x.webp 2x">
+                <source type="image/webp" srcset="./img/gallery-image-6.webp, ./img/gallery-image-6@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/gallery-image-6.jpg, ./img/gallery-image-6@2x.jpg 2x"
+                  width="172" height="153">
+                <source media="(max-width: 1199px)" srcset="./img/gallery-image-6.jpg, ./img/gallery-image-6@2x.jpg 2x"
+                  width="298" height="265">
+                <img src="./img/gallery-image-6.jpg" width="298" height="265" srcset="./img/gallery-image-6@2x.jpg 2x"
+                  alt="Фото из галлереи">
+              </picture>
+            </div>
+            <div class="gallery__slide swiper-slide">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/gallery-image-7.webp, ./img/gallery-image-7@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/gallery-image-7.webp, ./img/gallery-image-7@2x.webp 2x">
+                <source type="image/webp" srcset="./img/gallery-image-7.webp, ./img/gallery-image-7@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/gallery-image-7.jpg, ./img/gallery-image-7@2x.jpg 2x"
+                  width="390" height="260">
+                <source media="(max-width: 1199px)" srcset="./img/gallery-image-7.jpg, ./img/gallery-image-7@2x.jpg 2x"
+                  width="675" height="450">
+                <img src="./img/gallery-image-7.jpg" width="276" height="449" srcset="./img/gallery-image-7@2x.jpg 2x"
+                  alt="Фото из галлереи">
+              </picture>
+            </div>
           </div>
           <div class="gallery__btn-prev swiper-button-prev"></div>
           <div class="gallery__btn-next swiper-button-next"></div>
@@ -574,7 +658,12 @@
             <dd>г. Москва, пр-т Мира, д. 14, офис 101</dd>
           </div>
         </dl>
-        <div class="contacts__map"></div>
+        <div class="contacts__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.0573208005094!2d37.6326415!3d55.774876299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a6e17875109%3A0x390d6670ee1585e5!2z0L_RgC3RgiDQnNC40YDQsCwgMTQsINCc0L7RgdC60LLQsCwgMTI5MDkw!5e0!3m2!1sru!2sru!4v1692200127504!5m2!1sru!2sru"
+            width="585" height="324" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </section>
     </main>
     <footer class="footer">

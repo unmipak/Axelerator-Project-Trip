@@ -59,9 +59,37 @@
   max-width: 620px;
 }
 
+.header__nav-btn {
+  display: none;
+}
+
 
 @include vp-1199 {
+  .header {
+    padding: 30px 45px;
+  }
+  .header__nav {
+    order: 0;
+  }
 
+  .header__logo {
+    order: 1;
+  }
+
+  .header__tel {
+    order: 2;
+  }
+
+  .header__nav-btn {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: none;
+    border: none;
+    background-image: url(../img/stack.svg#menu);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 @include vp-767 {

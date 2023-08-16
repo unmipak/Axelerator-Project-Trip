@@ -39,7 +39,7 @@
   line-height: 100%;
   margin: 0;
   color: $color-default-white;
-  text-align: start;
+  text-align: center;
 }
 
 @mixin h1-mobile {
@@ -80,6 +80,20 @@
   font-size: 25px;
   line-height: 100%;
   margin: 0;
+
+  &::before {
+    position: absolute;
+    content: attr(data-title);
+    font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 100%;
+    color: $color-elephant;
+    opacity: 3%;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+  }
 }
 
 @mixin h2-mobile {
@@ -88,6 +102,20 @@
   font-size: 22px;
   line-height: 100%;
   margin: 0;
+
+  &::before {
+    position: absolute;
+    content: attr(data-title);
+    font-family: "Montserrat ExtraBold", "Arial", sans-serif;
+    font-size: 26px;
+    line-height: 100%;
+    color: $color-elephant;
+    opacity: 3%;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+  }
 }
 
 @mixin h3-desktop {
@@ -156,6 +184,20 @@
   font-family: "Montserrat Regular", "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
+  margin: 0;
+}
+
+@mixin text-regular-mobile {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+@mixin text-small-mobile {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
   margin: 0;
 }
 

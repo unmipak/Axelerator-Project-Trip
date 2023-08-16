@@ -22,20 +22,40 @@ const sliderTours = new Swiper('.tours__slider', {
     prevEl: '.tours__btn-prev',
     nextEl: '.tours__btn-next',
   },
-  slidesPerView: 3,
-  spaceBetween: 30,
-  slidesPerGroup: 1,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 18,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 });
 
 const sliderInstructors = new Swiper('.instructors', {
-  loop: true,
+  loop: false,
   navigation: {
     prevEl: '.instructors__btn-prev',
     nextEl: '.instructors__btn-next',
   },
-  slidesPerView: 4,
-  spaceBetween: 30,
-  slidesPerGroup: 1,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
 });
 
 const sliderReviews = new Swiper('.reviews__slider', {
@@ -58,6 +78,19 @@ const sliderAdvantages = new Swiper('.advantages__slider', {
   slidesPerView: 4,
   spaceBetween: 30,
   slidesPerGroup: 1,
+  freeMode: true,
 });
 
-export {sliderHero, sliderTours, sliderInstructors, sliderReviews, sliderAdvantages};
+const sliderGallery = new Swiper('.gallery__slider', {
+  loop: false,
+  navigation: {
+    prevEl: '.gallery__btn-prev',
+    nextEl: '.gallery__btn-next',
+  },
+  slidesPerView: 2.9,
+  spaceBetween: 5,
+  slidesPerColumn: 2,
+  freeMode: true,
+});
+
+export {sliderHero, sliderTours, sliderInstructors, sliderReviews, sliderAdvantages, sliderGallery};

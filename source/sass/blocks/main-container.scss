@@ -1,5 +1,6 @@
 .main-container {
   position: relative;
+  overflow: hidden;
 
   &::after {
     position: absolute;
@@ -16,5 +17,10 @@
   }
 }
 @include vp-1199 {
-
+  .main-container::after {
+    width: 301px;
+    height: 1364px;
+    top: 929px;
+    background-image: url("../img/clouds-tablet.png");
+  }
 }

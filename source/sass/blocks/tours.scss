@@ -33,12 +33,25 @@
   flex-direction: column;
   justify-content: flex-end;
   min-height: 412px;
+  overflow-y: auto;
 
   h3 {
     width: 100%;
     @include h3-desktop-light;
-    padding: 23px 50px 38px 20px;
+    padding: 23px 50px 17px 20px;
     z-index: 1;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 80px;
+      height: 1px;
+      background: $color-default-white;
+      opacity: 20%;
+      bottom: 0;
+      left: 20px;
+    }
   }
 
   img {
@@ -71,6 +84,7 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 37px;
+  row-gap: 17px;
   z-index: 1;
 
   p {
@@ -134,7 +148,7 @@
 .tours__details {
   width: 100%;
   margin: 0;
-  padding: 0 20px 28px;
+  padding: 20px 20px 28px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -236,3 +250,36 @@
   left: auto;
   @include btn-prev;
 }
+
+@include vp-1199 {
+  .tours {
+    padding: 70px 45px
+  }
+
+  .tours h2 {
+    @include h2-tablet;
+    margin-bottom: 46px;
+  }
+
+  .tours__slider {
+    max-width: 666px;
+  }
+
+  .tours__info {
+    gap: 17px;
+  }
+
+  .tours__location {
+    padding: 9px 15px 8px 30px;
+
+    &::after {
+      left: 15px;
+    }
+  }
+
+  .tours__link {
+    margin: 50px auto 0;
+  }
+}
+
+@include vp-767 {}

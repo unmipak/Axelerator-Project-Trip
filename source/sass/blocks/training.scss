@@ -80,3 +80,18 @@
     margin: 0;
   }
 }
+
+@include vp-1199 {
+  .training {
+    padding: 0 45px;
+  }
+
+  .training h2 {
+    @include h2-tablet;
+    margin-bottom: 26px;
+  }
+
+  .training p {
+    margin-bottom: 55px;
+  }
+}

@@ -1,18 +1,32 @@
 .custom-input {
+  position: relative;
   input,
   textarea {
     width: 100%;
     flex-grow: 1;
-    font-size: 14px;
     border: none;
+    font-family: "Montserrat Regular", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
     background: $color-default-white;
     color: $color-elephant;
-    padding: 24px 30px;
+    padding: 22px 30px;
+    border: 1px solid rgba(2, 102, 193, 0.1);
 
     &::-webkit-input-placeholder,
     &::placeholder {
       color: $color-elephant;
       opacity: 50%;
+    }
+
+    &:hover {
+      border: 1px solid $color-navy-blue;
+    }
+
+    &:hover::-webkit-input-placeholder,
+    &:hover::placeholder {
+      color: $color-navy-blue;
+      opacity: 100%;
     }
 
     &:focus::-webkit-input-placeholder,
@@ -21,31 +35,25 @@
       visibility: hidden;
     }
 
-    &:hover {
-      border-bottom: 1px solid $color-default-white;
-    }
-
     &:focus,
     &:focus-visible,
     &:active {
-      border-bottom: 1px solid transparent;
-      outline: 1px solid $color-default-white;
+      border: 1px solid $color-resolution-blue;
+      outline: none;
     }
 
-    &:disabled::-webkit-input-placeholder {
-      opacity: 40%;
+    &:disabled::-webkit-input-placeholder,
+    &:disabled::-moz-placeholder,
+    &:disabled::placeholder {
+      visibility: hidden;
     }
   }
 
   &.is-invalid {
+
     input,
     textarea {
-      border-bottom: 1px solid $color-torch-red;
-
-      &:focus,
-      &:hover {
-        border-bottom: 1px solid rgba($color-torch-red, 0.5);
-      }
+      border: 1px solid $color-torch-red;
     }
   }
 
@@ -55,7 +63,7 @@
     bottom: -20px;
 
     &.is-invalid {
-      font-family: "Roboto Condensed", "Arial", sans-serif;
+      font-family: "Montserrat Regular", "Arial", sans-serif;
       font-size: 14px;
       line-height: 22px;
       color: $color-torch-red;
@@ -64,13 +72,9 @@
 }
 
 @include vp-1199 {
-  .custom-input {
-
-  }
+  .custom-input {}
 }
 
 @include vp-767 {
-  .custom-input {
-
-  }
+  .custom-input {}
 }

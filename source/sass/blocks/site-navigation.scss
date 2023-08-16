@@ -59,3 +59,9 @@
   }
 }
 
+@include vp-1199 {
+  .site-navigation__list {
+    display: none;
+  }
+}
+

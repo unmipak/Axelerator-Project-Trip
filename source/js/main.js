@@ -37,10 +37,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // видео
 
-let video = document.querySelector('.gym__video');
-let videoBtn = document.querySelector('.gym__video-btn');
-let mobilePoster = 'img/video-preview-mobile.jpg';
-let defaultPoster = 'img/video-preview.jpg';
+let video = document.querySelector('video');
+let videoBtn = document.querySelector('.hero__video-btn');
+let mobilePoster = 'img/video-tablet.jpg';
+let defaultPoster = 'img/video-desktop.jpg';
 let breakpoint = window.matchMedia('(max-width:767px)');
 
 function breakpointChecker() {
