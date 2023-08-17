@@ -69,15 +69,15 @@ const sliderReviews = new Swiper('.reviews__slider', {
       slidesPerView: 1,
     },
     768: {
-      slidesPerView: 1.1,
+      slidesPerView: 1.2,
       spaceBetween: 30,
       slidesPerGroup: 1,
-      centeredInsufficientSlides: true,
+      centerInsufficientSlides: true,
     },
     1200: {
       slidesPerView: 1.5,
       spaceBetween: 30,
-      centeredInsufficientSlides: true,
+      centerInsufficientSlides: true,
     },
   },
 });
