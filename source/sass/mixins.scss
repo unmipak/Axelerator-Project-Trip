@@ -187,6 +187,20 @@
   margin: 0;
 }
 
+@mixin text-small-tablet {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+
+@mixin text-xsmall-tablet {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+}
+
 @mixin text-regular-mobile {
   font-family: "Montserrat Regular", "Arial", sans-serif;
   font-size: 14px;

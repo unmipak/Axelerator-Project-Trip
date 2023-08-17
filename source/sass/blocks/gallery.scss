@@ -51,3 +51,23 @@
   left: auto;
   @include btn-prev;
 }
+
+@include vp-1199 {
+  .gallery h2 {
+    @include h2-tablet;
+    margin: 0 45px 26px;
+  }
+  .gallery p {
+    @include text-small-tablet;
+    margin: 0 45px 36px;
+    max-width: 395px;
+  }
+
+  .gallery__btn-next {
+    right: 45px;
+  }
+
+  .gallery__btn-prev {
+    right: 86px;
+  }
+}

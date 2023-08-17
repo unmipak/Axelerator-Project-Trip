@@ -2,6 +2,8 @@
   padding: 308px 231px 307px;
   background-color: $color-elephant;
   background-image: url("../img/background-feedback.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   h2 {
@@ -35,7 +37,27 @@
 }
 
 @include vp-1199 {
+  .feedback {
+    padding: 192px 200px 183px;
+    background-image: url("../img/background-feedback-tablet.jpg");
+  }
 
+  .feedback h2 {
+    text-align: center;
+    @include h2-tablet;
+    color: $color-default-white;
+    margin-bottom: 15px;
+  }
+
+  .feedback__wrapper form {
+    gap: 7px;
+  }
+
+  .feedback__btn {
+    padding: 21px;
+    width: 266px;
+    margin-top: 8px;
+  }
 }
 
 @include vp-767 {

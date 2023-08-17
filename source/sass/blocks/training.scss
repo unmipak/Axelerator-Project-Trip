@@ -17,7 +17,7 @@
 .training__process {
   h3 {
     @include h3-desktop;
-    margin: 49px 0 45px;
+    margin: 19px 0 45px;
   }
 }
 
@@ -34,36 +34,6 @@
 .training__item {
   position: relative;
   width: 294px;
-  padding-left: 40px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 25px;
-    height: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  &--route::before {
-    background-image: url("../img/stack.svg#map");
-  }
-
-  &--equipment::before {
-    background-image: url("../img/stack.svg#boots");
-  }
-
-  &--nature::before {
-    background-image: url("../img/stack.svg#pine-tree");
-  }
-
-  &--danger::before {
-    background-image: url("../img/stack.svg#mountain");
-  }
 
   &::after {
     position: absolute;
@@ -78,20 +48,114 @@
 
   p {
     margin: 0;
+    position: relative;
+    padding-left: 40px;
   }
+}
+
+.training__item p::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.training__item--route p::before {
+  background-image: url("../img/stack.svg#map");
+}
+
+.training__item--equipment p::before {
+  background-image: url("../img/stack.svg#boots");
+}
+
+.training__item--nature p::before {
+  background-image: url("../img/stack.svg#pine-tree");
+}
+
+.training__item p::before {
+  background-image: url("../img/stack.svg#mountain");
 }
 
 @include vp-1199 {
   .training {
     padding: 0 45px;
+    border-bottom: none
   }
 
   .training h2 {
     @include h2-tablet;
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 
   .training p {
-    margin-bottom: 55px;
+    margin-bottom: 40px;
+    max-width: 590px;
+  }
+
+  .training__list {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 55px;
+    row-gap: 56px;
+    max-width: 590px;
+  }
+
+  .training__item {
+    margin: 0;
+    padding: 21px 0 15px;
+    height: 100%;
+  }
+
+  .training__item:nth-of-type(1):after,
+  .training__item:nth-of-type(2):after {
+    bottom: 0;
+    transform: translateY(50%);
+  }
+
+  .training__item:nth-of-type(3):after,
+  .training__item:nth-of-type(4):after {
+    bottom: auto;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
+  .training__item:nth-of-type(1)::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(2, 102, 193, 0.10);
+    width: 355px;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+  }
+
+  .training__item:nth-of-type(2)::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(2, 102, 193, 0.10);
+    width: 1px;
+    height: 56px;
+    bottom: -56px;
+    left: 7px;
+  }
+
+  .training__item:nth-of-type(3)::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(2, 102, 193, 0.10);
+    width: 355px;
+    height: 1px;
+    top: 0;
+    left: 0;
+  }
+
+  .training__item p {
+    margin: 0;
   }
 }

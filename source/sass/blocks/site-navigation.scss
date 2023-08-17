@@ -61,7 +61,9 @@
 
 @include vp-1199 {
   .site-navigation__list {
-    display: none;
+    gap: 20px;
+  }
+  .site-navigation__link {
+    font-size: 14px;
   }
 }
-

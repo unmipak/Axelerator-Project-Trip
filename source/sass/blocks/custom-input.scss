@@ -72,7 +72,11 @@
 }
 
 @include vp-1199 {
-  .custom-input {}
+  .custom-input input {
+    width: 266px;
+    font-size: 14px;
+    padding: 18px 15px;
+  }
 }
 
 @include vp-767 {

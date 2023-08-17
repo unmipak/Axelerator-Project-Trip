@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid rgba(45, 56, 63, 0.2);
 }
 
 .footer__logo {
@@ -53,6 +54,19 @@
 }
 
 
-@include vp-1199 {}
+@include vp-1199 {
+  .footer {
+    padding: 44px 45px 40px;
+  }
+
+  .footer__logo {
+    width: 118px;
+    height: 45px;
+  }
+
+  .footer__tel {
+    display: none;
+  }
+}
 
 @include vp-767 {}

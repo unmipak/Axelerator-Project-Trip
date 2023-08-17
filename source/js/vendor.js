@@ -1,5 +1,5 @@
 // Swiper 7.4.1
-import Swiper, {Navigation, Pagination} from './vendor/swiper';
+import Swiper, { Navigation, Pagination } from './vendor/swiper';
 import './vendor/focus-visible-polyfill';
 
 Swiper.use([Navigation, Pagination]);
@@ -49,11 +49,11 @@ const sliderInstructors = new Swiper('.instructors', {
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 21,
     },
     1200: {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 25,
     },
   },
 });
@@ -64,21 +64,47 @@ const sliderReviews = new Swiper('.reviews__slider', {
     prevEl: '.reviews__btn-prev',
     nextEl: '.reviews__btn-next',
   },
-  slidesPerView: 1.48,
-  spaceBetween: 30,
-  slidesPerGroup: 1,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1.1,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      centeredInsufficientSlides: true,
+    },
+    1200: {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
+      centeredInsufficientSlides: true,
+    },
+  },
 });
 
 const sliderAdvantages = new Swiper('.advantages__slider', {
-  loop: true,
-  navigation: {
-    prevEl: '.advantages__btn-prev',
-    nextEl: '.advantages__btn-next',
+  breakpoints: {
+    1200: {
+      loop: true,
+      navigation: {
+        prevEl: '.advantages__btn-prev',
+        nextEl: '.advantages__btn-next',
+      },
+      slidesPerView: 4.5,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      freeMode: true,
+    },
   },
-  slidesPerView: 4,
-  spaceBetween: 30,
-  slidesPerGroup: 1,
-  freeMode: true,
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth < 1200) {
+    sliderAdvantages.destroy(true, true);
+    const advantagesSliderContainer = document.querySelector('.advantages__slider');
+    const advantagesSliderWrapper = advantagesSliderContainer.querySelector('.swiper-wrapper');
+    advantagesSliderWrapper.classList.remove('swiper-wrapper');
+  }
 });
 
 const sliderGallery = new Swiper('.gallery__slider', {
@@ -93,4 +119,4 @@ const sliderGallery = new Swiper('.gallery__slider', {
   freeMode: true,
 });
 
-export {sliderHero, sliderTours, sliderInstructors, sliderReviews, sliderAdvantages, sliderGallery};
+export { sliderHero, sliderTours, sliderInstructors, sliderReviews, sliderAdvantages, sliderGallery };

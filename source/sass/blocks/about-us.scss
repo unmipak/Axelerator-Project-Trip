@@ -47,3 +47,34 @@
     z-index: -1;
   }
 }
+
+@include vp-1199 {
+  .about-us {
+    padding: 70px 45px 45px 399px;
+  }
+
+  .about-us::before {
+    display: none;
+  }
+
+  .about-us::after {
+    background-image: url(../img/background-about-us-tablet.png);
+    width: 475px;
+    height: 402px;
+  }
+
+  .about-us h2 {
+    @include h2-tablet;
+    margin-bottom: 36px;
+  }
+
+  .about-us h3 {
+    @include h3-tablet;
+    margin-bottom: 19px;
+  }
+
+  .about-us p {
+    @include text-small-tablet;
+    margin-bottom: 25px;
+  }
+}
