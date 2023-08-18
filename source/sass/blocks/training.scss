@@ -78,7 +78,7 @@
   background-image: url("../img/stack.svg#pine-tree");
 }
 
-.training__item p::before {
+.training__item--danger p::before {
   background-image: url("../img/stack.svg#mountain");
 }
 
@@ -157,5 +157,68 @@
 
   .training__item p {
     margin: 0;
+  }
+}
+
+@include vp-767 {
+  .training {
+    padding: 0 15px;
+    border-bottom: none;
+  }
+
+  .training h2 {
+    @include h2-mobile;
+    margin-bottom: 18px;
+  }
+
+  .training p {
+    @include text-regular-mobile;
+    max-width: none;
+    margin-bottom: 37px;
+  }
+
+  .training__process h3 {
+    @include h3-mobile;
+    margin: 7px 0 30px;
+  }
+
+  .training__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+  }
+
+  .training__list::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 89%;
+    background: rgba(2, 102, 193, 0.1);
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .training__item {
+    padding: 0 0 0 32px;
+  }
+
+  .training__item p {
+    @include text-small-mobile;
+    margin: 0;
+  }
+
+  .training__item::after,
+  .training__item:nth-of-type(1):after,
+  .training__item:nth-of-type(2):after,
+  .training__item:nth-of-type(3):after,
+  .training__item:nth-of-type(4):after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .training__item::before {
+    display: none;
   }
 }

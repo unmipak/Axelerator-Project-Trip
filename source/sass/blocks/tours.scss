@@ -282,4 +282,45 @@
   }
 }
 
-@include vp-767 {}
+@include vp-767 {
+  .tours {
+    padding: 66px 15px 60px;
+  }
+
+  .tours h2 {
+    @include h2-mobile;
+    margin-bottom: 28px;
+    max-width: 156px;
+
+    &::before {
+      width: 256px;
+      top: 0;
+    }
+  }
+
+  .tours__info {
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .tours__location {
+    order: 1;
+  }
+
+  .tours h3 {
+    @include h3-mobile-light;
+    padding: 15px 30px 15px 20px;
+  }
+
+  .tours__details {
+    padding: 15px 20px 27px;
+  }
+
+  .tours__details dd {
+    font-size: 12px;
+  }
+
+  .tours__link {
+    margin: 29px auto 0;
+  }
+}

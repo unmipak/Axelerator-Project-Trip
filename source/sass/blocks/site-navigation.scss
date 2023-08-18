@@ -13,33 +13,6 @@
   line-height: 100%;
   padding: 2px 4px;
   border: 1px solid transparent;
-}
-
-.site-navigation--light .site-navigation__link {
-  color: $color-default-white;
-
-  &:hover {
-    border-bottom: 1px solid $color-default-white;
-  }
-
-  &:focus-visible {
-    border: 1px solid $color-default-white;
-    outline: none;
-  }
-
-  &:active {
-    color: $color-default-white;
-    opacity: 100%;
-  }
-
-  &:disabled {
-    opacity: 50%;
-  }
-}
-
-.site-navigation--dark .site-navigation__link {
-  color: $color-elephant;
-
   &:hover {
     border-bottom: 1px solid $color-elephant;
   }

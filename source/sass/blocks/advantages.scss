@@ -154,6 +154,35 @@
 
 @include vp-767 {
   .advantages {
-    padding: 0;
+    padding: 0 15px 60px;
+  }
+
+  .advantages h2 {
+    @include h2-mobile;
+    margin-bottom: 30px;
+  }
+
+  .advantages h2::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .advantages__slide {
+    padding: 20px 10px;
+  }
+
+  .advantages__slide h3 {
+    @include h3-mobile-small;
+  }
+
+  .advantages__slide p {
+    @include text-small-mobile;
+  }
+
+  .advantages__slide::after {
+    top: 20px;
+    width: 42px;
+    height: 42px;
+    background-size: 18px;
   }
 }

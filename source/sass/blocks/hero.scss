@@ -245,16 +245,44 @@
   }
 }
 
-@include vp-1199 {
-  .swiper-pagination-fraction,
-  .swiper-pagination-custom,
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 90px;
-    right: 50%;
-    transform: translateX(50%);
-    width: auto;
+@include vp-767 {
+  .hero__slide {
+    padding: 139px 15px 25px;
+
+    &--1 {
+      background-image: url("../img/background-hero-mobile-1.jpg");
+    }
+
+    &--2 {
+      background-image: url("../img/background-hero-mobile-2.jpg");
+    }
+
+    &--3 {
+      background-image: url("../img/background-hero-mobile-3.jpg");
+    }
+
+    h1 {
+      @include h1-mobile;
+      max-width: none;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 20px;
+      margin: 15px 0 20px;
+      text-align: center;
+      max-width: none;
+    }
+  }
+
+  .hero__btn {
+    width: 220px;
+    margin-bottom: 124px;
+  }
+
+  .hero__video,
+  .hero__photos,
+  .hero__audio-player {
+    display: none;
   }
 }
-
-@include vp-767 {}

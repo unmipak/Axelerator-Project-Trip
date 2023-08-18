@@ -86,3 +86,28 @@
     @include text-xsmall-tablet;
   }
 }
+
+@include vp-767 {
+  .instructors {
+    max-width: none;
+  }
+
+  .instructors h3 {
+    @include h3-mobile;
+    margin-bottom: 34px;
+    max-width: 180px;
+  }
+
+  .instructors__slide {
+    padding: 20px;
+    height: 385px;
+  }
+
+  .instructors__slide h4 {
+    max-width: 70%;
+  }
+
+  .instructors__slide p {
+    @include text-xsmall-tablet;
+  }
+}
