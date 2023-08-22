@@ -5,6 +5,7 @@
   h2 {
     @include h2-desktop;
     margin-bottom: 58px;
+    max-width: 50%;
   }
 
   &::after {
@@ -22,8 +23,11 @@
 }
 
 .tours__slider {
-  position: relative;
   max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .tours__slide {
@@ -237,16 +241,23 @@
   }
 }
 
+.tours__btn-wrapper {
+  display: flex;
+  gap: 4px;
+  max-width: 78px;
+  margin-bottom: auto;
+}
+
 .tours__btn-next {
-  top: 0;
-  right: 0;
-  left: auto;
+  position: relative;
+  top: auto;
+  right: auto;
   @include btn-next;
 }
 
 .tours__btn-prev {
-  top: 0;
-  right: 41px;
+  position: relative;
+  top: auto;
   left: auto;
   @include btn-prev;
 }
@@ -263,6 +274,10 @@
 
   .tours__slider {
     max-width: 666px;
+  }
+
+  .tours__slide {
+    max-width: 324px;
   }
 
   .tours__info {
@@ -298,6 +313,10 @@
     }
   }
 
+  .tours__slider {
+    max-width: 290px;
+  }
+
   .tours__info {
     justify-content: flex-start;
     gap: 15px;
@@ -322,5 +341,6 @@
 
   .tours__link {
     margin: 29px auto 0;
+    font-size: 14px;
   }
 }

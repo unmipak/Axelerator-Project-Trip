@@ -50,16 +50,38 @@
   }
 
   .feedback__wrapper form {
+    margin: 0 auto;
+    flex-direction: column;
     gap: 7px;
+    width: 266px;
   }
 
   .feedback__btn {
     padding: 21px;
-    width: 266px;
+    width: 100%;
     margin-top: 8px;
   }
 }
 
 @include vp-767 {
+  .feedback {
+    padding: 181px 15px 175px;
+    background-image: url("../img/background-feedback-mobile.jpg");
+  }
 
+  .feedback h2 {
+    @include h2-mobile;
+    color: $color-default-white;
+    margin-bottom: 14px;
+  }
+
+  .feedback p {
+    @include text-small-mobile;
+    color: $color-default-white;
+    margin-bottom: 26px;
+  }
+
+  .feedback__wrapper form {
+    width: 290px;
+  }
 }

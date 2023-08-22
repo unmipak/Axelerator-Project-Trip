@@ -49,11 +49,9 @@ const sliderInstructors = new Swiper('.instructors', {
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 21,
     },
     1200: {
       slidesPerView: 4,
-      spaceBetween: 25,
     },
   },
 });
@@ -69,15 +67,14 @@ const sliderReviews = new Swiper('.reviews__slider', {
       slidesPerView: 1,
     },
     768: {
-      slidesPerView: 1.2,
-      spaceBetween: 30,
-      slidesPerGroup: 1,
+      slidesPerView: 1.3,
       centerInsufficientSlides: true,
+      freeMode: true,
     },
     1200: {
       slidesPerView: 1.5,
-      spaceBetween: 30,
       centerInsufficientSlides: true,
+      freeMode: true,
     },
   },
 });
@@ -109,14 +106,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const sliderGallery = new Swiper('.gallery__slider', {
   loop: false,
+  freeMode: true,
   navigation: {
     prevEl: '.gallery__btn-prev',
     nextEl: '.gallery__btn-next',
   },
-  slidesPerView: 2.9,
-  spaceBetween: 5,
-  slidesPerColumn: 2,
-  freeMode: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1.5,
+      spaceBetween: 5,
+    },
+    1200: {
+      slidesPerView: 2.9,
+      spaceBetween: 5,
+    },
+  },
 });
 
 export { sliderHero, sliderTours, sliderInstructors, sliderReviews, sliderAdvantages, sliderGallery };

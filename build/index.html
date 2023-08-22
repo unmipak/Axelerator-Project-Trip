@@ -24,7 +24,7 @@
           <use xlink:href="./img/stack.svg#logotype-desktop" />
         </svg>
       </a>
-      <nav class="header__nav">
+      <nav class="header__nav header__nav--nojs">
         <button class="header__nav-btn"></button>
         <ul class="header__nav-list">
           <li class="header__nav-item">
@@ -109,6 +109,10 @@
       <section class="tours" id="tours">
         <div class="tours__slider swiper">
           <h2 data-title="Ближайшие туры">Ближайшие туры</h2>
+          <div class="tours__btn-wrapper">
+            <div class="tours__btn-prev swiper-button-prev" aria-label="Назад"></div>
+            <div class="tours__btn-next swiper-button-next" aria-label="Вперед"></div>
+          </div>
           <div class="swiper-wrapper">
             <div class="tours__slide tours__slide--elbrus swiper-slide">
               <picture>
@@ -234,8 +238,6 @@
               </dl>
             </div>
           </div>
-          <div class="tours__btn-prev swiper-button-prev" aria-label="Назад"></div>
-          <div class="tours__btn-next swiper-button-next" aria-label="Вперед"></div>
         </div>
         <a class="tours__link" href="#">Показать все туры</a>
       </section>
@@ -245,8 +247,10 @@
           Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
         <div class="instructors swiper">
           <h3>Наши инструкторы</h3>
-          <div class="instructors__btn-prev swiper-button-prev"></div>
-          <div class="instructors__btn-next swiper-button-next"></div>
+          <div class="instructors__btn-wrapper">
+            <div class="instructors__btn-prev swiper-button-prev"></div>
+            <div class="instructors__btn-next swiper-button-next"></div>
+          </div>
           <div class="swiper-wrapper">
             <div class="instructors__slide instructors__slide--prokofyev swiper-slide">
               <picture>
@@ -403,6 +407,10 @@
       <section class="reviews" id="reviews">
         <div class="reviews__slider swiper">
           <h2 data-title="Отзывы">Отзывы</h2>
+          <div class="reviews__btn-wrapper">
+            <div class="reviews__btn-prev swiper-button-prev" aria-label="Назад"></div>
+            <div class="reviews__btn-next swiper-button-next" aria-label="Вперед"></div>
+          </div>
           <div class="swiper-wrapper">
             <div class="reviews__slide swiper-slide">
               <picture>
@@ -506,8 +514,6 @@
               </div>
             </div>
           </div>
-          <div class="reviews__btn-prev swiper-button-prev" aria-label="Назад"></div>
-          <div class="reviews__btn-next swiper-button-next" aria-label="Вперед"></div>
         </div>
       </section>
       <section class="advantages">
@@ -545,8 +551,10 @@
                 воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
             </div>
           </div>
-          <div class="advantages__btn-prev swiper-button-prev" aria-label="Назад"></div>
-          <div class="advantages__btn-next swiper-button-next" aria-label="Вперед"></div>
+          <div class="advantages__btn-wrapper">
+            <div class="advantages__btn-prev swiper-button-prev" aria-label="Назад"></div>
+            <div class="advantages__btn-next swiper-button-next" aria-label="Вперед"></div>
+          </div>
         </div>
       </section>
       <section class="gallery" id="gallery">
@@ -554,6 +562,10 @@
         <div class="gallery__slider swiper">
           <p>Добавляйте фото в Instagram с хэштегом #лайфтур, а также отмечайте нас на фото. Лучшие фотографии украсят
             этот раздел нашего сайта.</p>
+          <div class="gallery__btn-wrapper">
+            <div class="gallery__btn-prev swiper-button-prev"></div>
+            <div class="gallery__btn-next swiper-button-next"></div>
+          </div>
           <div class="swiper-wrapper">
             <div class="gallery__slide swiper-slide">
               <picture>
@@ -653,8 +665,6 @@
               </picture>
             </div>
           </div>
-          <div class="gallery__btn-prev swiper-button-prev"></div>
-          <div class="gallery__btn-next swiper-button-next"></div>
         </div>
       </section>
       <section class="feedback">

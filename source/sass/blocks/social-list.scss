@@ -21,5 +21,8 @@
 }
 
 @include vp-767 {
-
+  .social-list {
+    justify-content: flex-start;
+    width: 100%;
+  }
 }

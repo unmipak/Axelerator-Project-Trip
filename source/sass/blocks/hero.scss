@@ -4,6 +4,7 @@
   background-color: rgba(15, 20, 41, .33);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   &::before {
     position: absolute;
@@ -17,15 +18,15 @@
   }
 
   &--1 {
-    background-image: url("../img/background-hero-desktop-1.jpg");
+    background-image: url("../img/background-hero-1.jpg");
   }
 
   &--2 {
-    background-image: url("../img/background-hero-desktop-2.jpg");
+    background-image: url("../img/background-hero-2.jpg");
   }
 
   &--3 {
-    background-image: url("../img/background-hero-desktop-3.jpg");
+    background-image: url("../img/background-hero-3.jpg");
   }
 
   h1 {
@@ -182,18 +183,6 @@
     justify-content: flex-start;
     align-items: center;
     height: auto;
-
-    &--1 {
-      background-image: url("../img/background-hero-tablet-1.jpg");
-    }
-
-    &--2 {
-      background-image: url("../img/background-hero-tablet-2.jpg");
-    }
-
-    &--3 {
-      background-image: url("../img/background-hero-tablet-3.jpg");
-    }
   }
 
   .hero__slide h1 {
@@ -248,18 +237,6 @@
 @include vp-767 {
   .hero__slide {
     padding: 139px 15px 25px;
-
-    &--1 {
-      background-image: url("../img/background-hero-mobile-1.jpg");
-    }
-
-    &--2 {
-      background-image: url("../img/background-hero-mobile-2.jpg");
-    }
-
-    &--3 {
-      background-image: url("../img/background-hero-mobile-3.jpg");
-    }
 
     h1 {
       @include h1-mobile;
