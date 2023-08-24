@@ -304,8 +304,8 @@
 .swiper-pagination-custom,
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 97px;
-  right: 120px;
+  bottom: 92px;
+  right: 115px;
   width: auto;
 }
 
@@ -403,7 +403,7 @@ button.swiper-pagination-bullet {
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 15px);
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7px);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
@@ -730,7 +730,7 @@ button.swiper-pagination-bullet {
   .swiper-pagination-custom,
   .swiper-horizontal>.swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 90px;
+    bottom: 84px;
     right: 50%;
     transform: translateX(50%);
     width: auto;
@@ -742,7 +742,7 @@ button.swiper-pagination-bullet {
   .swiper-pagination-custom,
   .swiper-horizontal>.swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 40px;
+    bottom: 33px;
     right: 50%;
     transform: translateX(50%);
     width: auto;

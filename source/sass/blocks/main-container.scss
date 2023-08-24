@@ -1,6 +1,9 @@
 .main-container {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &::after {
     position: absolute;
@@ -14,14 +17,23 @@
     background-position: center;
     background-size: contain;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/clouds-desktop@2x.png");
+    }
   }
 }
+
 @include vp-1199 {
   .main-container::after {
     width: 301px;
     height: 1364px;
     top: 929px;
     background-image: url("../img/clouds-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/clouds-tablet@2x.png");
+    }
   }
 }
 
@@ -31,5 +43,9 @@
     height: 595px;
     top: 705px;
     background-image: url("../img/clouds-mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/clouds-mobile@2x.png");
+    }
   }
 }

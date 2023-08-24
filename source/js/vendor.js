@@ -1,5 +1,5 @@
 // Swiper 7.4.1
-import Swiper, { Navigation, Pagination } from './vendor/swiper';
+import Swiper, {Navigation, Pagination} from './vendor/swiper';
 import './vendor/focus-visible-polyfill';
 
 Swiper.use([Navigation, Pagination]);
@@ -87,9 +87,9 @@ const sliderAdvantages = new Swiper('.advantages__slider', {
         prevEl: '.advantages__btn-prev',
         nextEl: '.advantages__btn-next',
       },
-      slidesPerView: 4.5,
+      slidesPerView: 3.8,
       spaceBetween: 30,
-      slidesPerGroup: 1,
+      centerSlides: true,
       freeMode: true,
     },
   },
@@ -126,4 +126,4 @@ const sliderGallery = new Swiper('.gallery__slider', {
   },
 });
 
-export { sliderHero, sliderTours, sliderInstructors, sliderReviews, sliderAdvantages, sliderGallery };
+export {sliderHero, sliderTours, sliderInstructors, sliderReviews, sliderAdvantages, sliderGallery};

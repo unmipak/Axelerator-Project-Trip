@@ -7,6 +7,7 @@
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+  margin-top: 16px;
   margin-bottom: 20px;
 }
 
@@ -20,9 +21,16 @@
   align-items: center;
 }
 
+@include vp-1199 {
+  .social-list {
+    margin-top: 30px;
+  }
+}
+
 @include vp-767 {
   .social-list {
     justify-content: flex-start;
     width: 100%;
+    margin: 0 0 0 4px;
   }
 }

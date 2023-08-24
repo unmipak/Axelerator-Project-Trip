@@ -4,8 +4,8 @@
   input,
   textarea {
     width: 100%;
+    min-width: 340px;
     flex-grow: 1;
-    border: none;
     font-family: "Montserrat Regular", "Arial", sans-serif;
     font-size: 16px;
     line-height: 100%;
@@ -51,7 +51,6 @@
   }
 
   &.is-invalid {
-
     input,
     textarea {
       border: 1px solid $color-torch-red;
@@ -76,12 +75,11 @@
   .custom-input {
     width: 100%;
   }
+
   .custom-input input {
+    min-width: 0;
     width: 100%;
     font-size: 14px;
-    padding: 18px 15px;
+    padding: 16px 15px;
   }
-}
-
-@include vp-767 {
 }

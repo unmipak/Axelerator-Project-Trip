@@ -4,7 +4,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  gap: 26px;
+  gap: 23px;
 }
 
 .site-navigation__link {
@@ -13,6 +13,7 @@
   line-height: 100%;
   padding: 2px 4px;
   border: 1px solid transparent;
+
   &:hover {
     border-bottom: 1px solid $color-elephant;
   }
@@ -34,8 +35,9 @@
 
 @include vp-1199 {
   .site-navigation__list {
-    gap: 20px;
+    gap: 12px;
   }
+
   .site-navigation__link {
     font-size: 14px;
   }
@@ -46,9 +48,9 @@
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: auto;
-    column-gap: 81px;
-    row-gap: 15px;
+    column-gap: 38px;
+    row-gap: 5px;
     grid-auto-flow: column;
-    margin-bottom: 27px;
+    margin: 0;
   }
 }

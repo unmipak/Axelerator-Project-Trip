@@ -1,6 +1,7 @@
 .about-us {
+  width: 100%;
   position: relative;
-  padding: 107px 120px 70px 735px;
+  padding: 130px 120px 60px 735px;
 
   h2 {
     @include h2-desktop;
@@ -9,12 +10,12 @@
 
   h3 {
     @include h3-desktop;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   p {
     @include text-small-desktop;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
 
   &::before {
@@ -24,7 +25,7 @@
     right: -222px;
     width: 840px;
     height: 280px;
-    background-image: url(../img/clouds-decoration.png);
+    background-image: url("../img/clouds-decoration.png");
     background-color: $color-default-white;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,18 +40,22 @@
     left: 0;
     width: 808px;
     height: 474px;
-    background-image: url(../img/background-about-us-desktop.png);
+    background-image: url("../img/background-about-us-desktop.png");
     background-color: $color-default-white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-about-us-desktop@2x.png");
+    }
   }
 }
 
 @include vp-1199 {
   .about-us {
-    padding: 70px 45px 45px 399px;
+    padding: 75px 45px 32px 399px;
   }
 
   .about-us::before {
@@ -58,30 +63,35 @@
   }
 
   .about-us::after {
-    background-image: url(../img/background-about-us-tablet.png);
+    top: 80px;
+    background-image: url("../img/background-about-us-tablet.png");
     width: 475px;
     height: 402px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-about-us-tablet@2x.png");
+    }
   }
 
   .about-us h2 {
     @include h2-tablet;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
   }
 
   .about-us h3 {
     @include h3-tablet;
-    margin-bottom: 19px;
+    margin-bottom: 16px;
   }
 
   .about-us p {
     @include text-small-tablet;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
   }
 }
 
 @include vp-767 {
   .about-us {
-    padding: 458px 15px 9px 15px;
+    padding: 449px 15px 0 15px;
   }
 
   .about-us::before {
@@ -90,10 +100,14 @@
 
   .about-us::after {
     top: 0;
-    background-image: url(../img/background-about-us-mobile.png);
+    background-image: url("../img/background-about-us-mobile.png");
     width: 100%;
     height: 402px;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-about-us-mobile@2x.png");
+    }
   }
 
   .about-us h2 {
@@ -103,11 +117,11 @@
 
   .about-us h3 {
     @include h3-mobile;
-    margin-bottom: 18px;
+    margin-bottom: 17px;
   }
 
   .about-us p {
-    @include text-small-mobile;
-    margin-bottom: 51px;
+    @include text-regular-mobile;
+    margin-bottom: 41px;
   }
 }

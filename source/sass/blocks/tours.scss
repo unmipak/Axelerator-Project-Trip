@@ -1,11 +1,16 @@
 .tours {
+  width: 100%;
   position: relative;
-  padding: 100px 120px 102px;
+  padding: 121px 120px 126px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
 
   h2 {
     @include h2-desktop;
-    margin-bottom: 58px;
-    max-width: 50%;
+    margin-bottom: 54px;
+    flex-grow: 1;
+    max-width: 1122px;
   }
 
   &::after {
@@ -36,12 +41,12 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 412px;
+  height: 412px;
   overflow-y: auto;
 
   h3 {
-    width: 100%;
     @include h3-desktop-light;
+    width: 100%;
     padding: 23px 50px 17px 20px;
     z-index: 1;
     position: relative;
@@ -87,7 +92,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  column-gap: 37px;
+  column-gap: 30px;
   row-gap: 17px;
   z-index: 1;
 
@@ -104,13 +109,14 @@
   position: relative;
   padding: 9px 25px 8px 39px;
   background: $color-navy-blue;
+  width: 108px;
 
   &::after {
     position: absolute;
     content: "";
     width: 9px;
     height: 12px;
-    background-image: url(../img/stack.svg#pin-filled-white);
+    background-image: url("../img/stack.svg#pin-filled-white");
     background-repeat: no-repeat;
     top: 50%;
     transform: translateY(-50%);
@@ -124,12 +130,20 @@
   padding-left: 28px;
 }
 
+.tours__days {
+  width: 76px;
+}
+
+.tours__nights {
+  width: 82px;
+}
+
 .tours__days::after {
   position: absolute;
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url(../img/stack.svg#sun);
+  background-image: url("../img/stack.svg#sun");
   background-repeat: no-repeat;
   top: 50%;
   transform: translateY(-50%);
@@ -141,7 +155,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url(../img/stack.svg#moon);
+  background-image: url("../img/stack.svg#moon");
   background-repeat: no-repeat;
   top: 50%;
   transform: translateY(-50%);
@@ -152,7 +166,7 @@
 .tours__details {
   width: 100%;
   margin: 0;
-  padding: 20px 20px 28px;
+  padding: 20px 20px 26px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -180,17 +194,37 @@
     display: block;
     width: 79px;
     height: 14px;
-    background-image: url(../img/sprite/star-filled.svg);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+.tours__slide--elbrus .tours__level dd,
+.tours__slide--fisht .tours__level dd {
+  background-image: url("../img/sprite/stars-3.svg");
+}
+
+.tours__slide--belukha .tours__level dd {
+  background-image: url("../img/sprite/stars-2.svg");
+}
+
+.tours__date {
+  min-width: 82px;
+}
+
+.tours__group {
+  min-width: 72px;
+}
+
+.tours__link-wrapper {
+  width: 100%;
 }
 
 .tours__link {
   position: relative;
   display: block;
   width: fit-content;
-  margin: 52px auto 0;
+  margin: 53px auto 0;
   padding-right: 24px;
   color: $color-elephant;
   font-family: "Montserrat Bold", "Arial", sans-serif;
@@ -202,7 +236,7 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/stack.svg#arrow-link-default);
+    background-image: url("../img/stack.svg#arrow-link-default");
     background-repeat: no-repeat;
     width: 12px;
     height: 10px;
@@ -219,7 +253,7 @@
 
   &:hover::after,
   &:focus-visible::after {
-    background-image: url(../img/stack.svg#arrow-link-hover);
+    background-image: url("../img/stack.svg#arrow-link-hover");
   }
 
   &:active {
@@ -228,7 +262,7 @@
   }
 
   &:active::after {
-    background-image: url(../img/stack.svg#arrow-link-active);
+    background-image: url("../img/stack.svg#arrow-link-active");
   }
 
   &:disabled {
@@ -237,7 +271,7 @@
   }
 
   &:disabled::after {
-    background-image: url(../img/stack.svg#arrow-link-disabled);
+    background-image: url("../img/stack.svg#arrow-link-disabled");
   }
 }
 
@@ -252,6 +286,7 @@
   position: relative;
   top: auto;
   right: auto;
+
   @include btn-next;
 }
 
@@ -259,17 +294,28 @@
   position: relative;
   top: auto;
   left: auto;
+
   @include btn-prev;
 }
 
 @include vp-1199 {
   .tours {
-    padding: 70px 45px
+    padding: 78px 45px 87px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .tours h2 {
     @include h2-tablet;
-    margin-bottom: 46px;
+    margin-top: 10px;
+    margin-bottom: 42px;
+    width: 80%;
+  }
+
+  .tours__btn-wrapper {
+    margin-top: 5px;
   }
 
   .tours__slider {
@@ -281,11 +327,13 @@
   }
 
   .tours__info {
-    gap: 17px;
+    gap: 10px;
   }
 
   .tours__location {
-    padding: 9px 15px 8px 30px;
+    padding: 9px 23px 9px 30px;
+    width: auto;
+    min-width: 92px;
 
     &::after {
       left: 15px;
@@ -293,24 +341,30 @@
   }
 
   .tours__link {
-    margin: 50px auto 0;
+    text-align: center;
+    margin: 52px auto 0;
   }
 }
 
 @include vp-767 {
   .tours {
-    padding: 66px 15px 60px;
+    padding: 66px 15px;
+    justify-content: space-between;
   }
 
   .tours h2 {
     @include h2-mobile;
     margin-bottom: 28px;
-    max-width: 156px;
+    max-width: 55%;
 
     &::before {
       width: 256px;
       top: 0;
     }
+  }
+
+  .tours__btn-wrapper {
+    margin-top: 3px;
   }
 
   .tours__slider {
@@ -319,28 +373,49 @@
 
   .tours__info {
     justify-content: flex-start;
-    gap: 15px;
+    column-gap: 14px;
+    row-gap: 19px;
+  }
+
+  .tours__days,
+  .tours__nights {
+    padding-left: 34px;
   }
 
   .tours__location {
     order: 1;
+    padding: 9px 22px 8px 30px;
   }
 
-  .tours h3 {
+  .tours__slide h3 {
     @include h3-mobile-light;
-    padding: 15px 30px 15px 20px;
+    padding: 14px 30px 15px 20px;
   }
 
   .tours__details {
-    padding: 15px 20px 27px;
+    padding: 15px 10px 28px 18px;
+  }
+
+  .tours__details dt {
+    margin-bottom: 5px;
   }
 
   .tours__details dd {
     font-size: 12px;
   }
 
+  .tours__level dd {
+    display: block;
+    width: 73px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
   .tours__link {
-    margin: 29px auto 0;
+    padding-right: 18px;
+    margin: 29px auto 0 auto;
     font-size: 14px;
   }
 }

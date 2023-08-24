@@ -1,27 +1,33 @@
 .training {
-  padding: 0 90px 32px;
+  width: 100%;
+  padding: 0 90px 32px 90px;
   border-bottom: 1px solid $color-navy-blue;
+  max-width: 1440px;
 
   h2 {
     @include h2-desktop;
-    margin-bottom: 58px;
+    margin-bottom: 30px;
+    margin-left: 30px;
   }
 
   p {
     @include text-regular-desktop;
-    margin-bottom: 52px;
     max-width: 820px;
+    margin-left: 30px;
   }
 }
 
 .training__process {
+  padding-left: 30px;
+
   h3 {
     @include h3-desktop;
-    margin: 19px 0 45px;
+    margin: 19px 0 40px;
   }
 }
 
 .training__list {
+  max-width: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -29,11 +35,12 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  gap: 30px;
 }
 
 .training__item {
   position: relative;
-  width: 294px;
+  width: 278px;
 
   &::after {
     position: absolute;
@@ -82,46 +89,86 @@
   background-image: url("../img/stack.svg#mountain");
 }
 
+@include vp-1438 {
+  .training__list {
+    justify-content: space-between;
+    column-gap: 0;
+    row-gap: 56px;
+    max-width: none;
+    align-items: stretch;
+  }
+
+  .training__item {
+    width: auto;
+    max-width: 230px;
+  }
+
+  .training__item p {
+    display: block;
+    margin: auto 0;
+  }
+}
+
 @include vp-1199 {
   .training {
     padding: 0 15px;
-    border-bottom: none
+    border-bottom: none;
   }
 
   .training h2 {
     @include h2-tablet;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
     margin-left: 30px;
   }
 
   .training p {
-    margin-bottom: 40px;
+    margin-bottom: 57px;
     max-width: 590px;
     margin-left: 30px;
+  }
+
+  .training__process h3 {
+    @include h3-tablet;
+    margin: 13px 0 18px;
   }
 
   .training__list {
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 55px;
+    column-gap: 136px;
     row-gap: 56px;
-    max-width: 590px;
+    max-width: 100%;
+    justify-content: start;
   }
 
   .training__item {
     margin: 0;
     padding: 21px 0 15px;
     height: 100%;
+    max-width: 354px;
   }
 
-  .training__item:nth-of-type(1):after,
-  .training__item:nth-of-type(2):after {
+  .training__item p {
+    @include text-small-tablet;
+    margin: 0;
+  }
+
+  .training__item:nth-of-type(3) {
+    order: 1;
+  }
+
+  .training__item:nth-of-type(4) {
+    order: 0;
+  }
+
+  .training__item:nth-of-type(1)::after,
+  .training__item:nth-of-type(2)::after {
     bottom: 0;
     transform: translateY(50%);
   }
 
-  .training__item:nth-of-type(3):after,
-  .training__item:nth-of-type(4):after {
+  .training__item:nth-of-type(3)::after,
+  .training__item:nth-of-type(4)::after {
     bottom: auto;
     top: 0;
     transform: translateY(-50%);
@@ -130,7 +177,7 @@
   .training__item:nth-of-type(1)::before {
     position: absolute;
     content: "";
-    background-color: rgba(2, 102, 193, 0.10);
+    background-color: rgba(2, 102, 193, 0.1);
     width: 355px;
     height: 1px;
     bottom: 0;
@@ -140,25 +187,21 @@
   .training__item:nth-of-type(2)::before {
     position: absolute;
     content: "";
-    background-color: rgba(2, 102, 193, 0.10);
+    background-color: rgba(2, 102, 193, 0.1);
     width: 1px;
     height: 56px;
     bottom: -56px;
     left: 7px;
   }
 
-  .training__item:nth-of-type(3)::before {
+  .training__item:nth-of-type(4)::before {
     position: absolute;
     content: "";
-    background-color: rgba(2, 102, 193, 0.10);
+    background-color: rgba(2, 102, 193, 0.1);
     width: 355px;
     height: 1px;
     top: 0;
     left: 0;
-  }
-
-  .training__item p {
-    margin: 0;
   }
 }
 
@@ -179,9 +222,13 @@
     margin-bottom: 37px;
   }
 
+  .training__process {
+    padding-left: 3px;
+  }
+
   .training__process h3 {
     @include h3-mobile;
-    margin: 7px 0 30px;
+    margin: 37px 0 30px;
   }
 
   .training__list {
@@ -206,6 +253,7 @@
 
   .training__item {
     padding: 0 0 0 32px;
+    max-width: none;
   }
 
   .training__item p {
@@ -214,10 +262,10 @@
   }
 
   .training__item::after,
-  .training__item:nth-of-type(1):after,
-  .training__item:nth-of-type(2):after,
-  .training__item:nth-of-type(3):after,
-  .training__item:nth-of-type(4):after {
+  .training__item:nth-of-type(1)::after,
+  .training__item:nth-of-type(2)::after,
+  .training__item:nth-of-type(3)::after,
+  .training__item:nth-of-type(4)::after {
     top: 50%;
     transform: translateY(-50%);
   }

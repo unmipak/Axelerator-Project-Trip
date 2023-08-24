@@ -1,13 +1,13 @@
 // Desktop first
 
-@mixin vp-1365 {
-  @media (max-width: ($vp-1366 - 1px)) {
+@mixin vp-1438 {
+  @media (max-width: ($vp-1437 - 1px)) {
     @content;
   }
 }
 
-@mixin vp-1339 {
-  @media (max-width: ($vp-1340 - 1px)) {
+@mixin vp-1239 {
+  @media (max-width: ($vp-1240 - 1px)) {
     @content;
   }
 }
@@ -266,7 +266,7 @@
     content: "";
     width: 13px;
     height: 8px;
-    background-image: url(../img/stack.svg#arrow-right);
+    background-image: url("../img/stack.svg#arrow-right");
     background-repeat: no-repeat;
   }
 
@@ -288,13 +288,13 @@
 
   &:hover::after,
   &:focus-visible::after {
-    background-image: url(../img/stack.svg#arrow-right-hover);
+    background-image: url("../img/stack.svg#arrow-right-hover");
     background-repeat: no-repeat;
   }
 
   &:active::after,
   &:disabled::after {
-    background-image: url(../img/stack.svg#arrow-right);
+    background-image: url("../img/stack.svg#arrow-right");
     background-repeat: no-repeat;
   }
 }
@@ -310,7 +310,7 @@
     content: "";
     width: 13px;
     height: 8px;
-    background-image: url(../img/stack.svg#arrow-left);
+    background-image: url("../img/stack.svg#arrow-left");
     background-repeat: no-repeat;
   }
 
@@ -332,13 +332,13 @@
 
   &:hover::after,
   &:focus-visible::after {
-    background-image: url(../img/stack.svg#arrow-left-hover);
+    background-image: url("../img/stack.svg#arrow-left-hover");
     background-repeat: no-repeat;
   }
 
   &:active::after,
   &:disabled::after {
-    background-image: url(../img/stack.svg#arrow-left);
+    background-image: url("../img/stack.svg#arrow-left");
     background-repeat: no-repeat;
   }
 }
@@ -392,4 +392,3 @@
     opacity: 10%;
   }
 }
-
