@@ -25,7 +25,7 @@
         </svg>
       </a>
       <nav class="header__nav header__nav--nojs">
-        <button class="header__nav-btn"></button>
+        <button class="header__nav-btn" aria-label="Меню сайта"></button>
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a class="header__nav-link" href="#hero">Туры</a>
@@ -70,7 +70,7 @@
                 <video width="482" height="317" poster="./img/video-desktop.jpg">
                   <source src="./img/video.mp4">
                 </video>
-                <button class="hero__video-btn" type="button"></button>
+                <button class="hero__video-btn" type="button" aria-label="Проиграть"></button>
               </div>
             </div>
           </div>
@@ -89,6 +89,16 @@
                 </li>
               </ul>
               <div class="hero__photos">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1199px)"
+                    srcset="./img/photo-cards-tablet.webp, ./img/photo-cards-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="./img/photo-cards-desktop.webp, ./img/photo-cards-desktop@2x.webp 2x">
+                  <source media="(max-width: 1199px)"
+                    srcset=".img/photo-cards-tablet.png, ./img/photo-cards-tablet@2x.png 2x" width="442" height="365">
+                  <img class="tours__picture" src="./img/photo-cards-desktop.png" width="410" height="459"
+                    srcset="./img/photo-cards-desktop@2x.png 2x" alt="Фотографии с экскурсии">
+                </picture>
               </div>
             </div>
           </div>
@@ -107,8 +117,7 @@
                 </li>
               </ul>
               <div class="hero__audio-player">
-                <iframe width="340" height="220"
-                  src="https://music.yandex.ru/iframe/#track/112912322/25474374">
+                <iframe width="340" height="220" src="https://music.yandex.ru/iframe/#track/112912322/25474374">
                 </iframe>
               </div>
             </div>
@@ -119,8 +128,8 @@
       <section class="tours" id="tours">
         <h2 data-title="Ближайшие туры">Ближайшие туры</h2>
         <div class="tours__btn-wrapper">
-          <div class="tours__btn-prev swiper-button-prev" aria-label="Назад"></div>
-          <div class="tours__btn-next swiper-button-next" aria-label="Вперед"></div>
+          <button class="tours__btn-prev swiper-button-prev" type="button" aria-label="Назад"></button>
+          <button class="tours__btn-next swiper-button-next" type="button" aria-label="Вперед"></button>
         </div>
         <div class="tours__slider swiper">
           <div class="swiper-wrapper">
@@ -260,8 +269,8 @@
         <div class="instructors swiper">
           <h3>Наши инструкторы</h3>
           <div class="instructors__btn-wrapper">
-            <div class="instructors__btn-prev swiper-button-prev"></div>
-            <div class="instructors__btn-next swiper-button-next"></div>
+            <button class="instructors__btn-prev swiper-button-prev" type="button" aria-label="Назад"></button>
+            <button class="instructors__btn-next swiper-button-next" type="button" aria-label="Вперед"></button>
           </div>
           <div class="swiper-wrapper">
             <div class="instructors__slide instructors__slide--prokofyev swiper-slide">
@@ -420,8 +429,8 @@
         <div class="reviews__slider swiper">
           <h2 data-title="Отзывы">Отзывы</h2>
           <div class="reviews__btn-wrapper">
-            <div class="reviews__btn-prev swiper-button-prev" aria-label="Назад"></div>
-            <div class="reviews__btn-next swiper-button-next" aria-label="Вперед"></div>
+            <button class="reviews__btn-prev swiper-button-prev" type="button" aria-label="Назад"></button>
+            <button class="reviews__btn-next swiper-button-next" type="button" aria-label="Вперед"></button>
           </div>
           <div class="swiper-wrapper">
             <div class="reviews__slide swiper-slide">
@@ -558,8 +567,8 @@
             </div>
           </div>
           <div class="advantages__btn-wrapper">
-            <div class="advantages__btn-prev swiper-button-prev" aria-label="Назад"></div>
-            <div class="advantages__btn-next swiper-button-next" aria-label="Вперед"></div>
+            <button class="advantages__btn-prev swiper-button-prev" type="button" aria-label="Назад"></button>
+            <button class="advantages__btn-next swiper-button-next" type="button" aria-label="Вперед"></button>
           </div>
         </div>
       </section>
@@ -569,8 +578,8 @@
           <p>Добавляйте фото в&nbsp;Instagram с&nbsp;хэштегом #лайфтур, а&nbsp;также отмечайте нас на&nbsp;фото. Лучшие
             фотографии украсят этот раздел нашего сайта.</p>
           <div class="gallery__btn-wrapper">
-            <div class="gallery__btn-prev swiper-button-prev"></div>
-            <div class="gallery__btn-next swiper-button-next"></div>
+            <button class="gallery__btn-prev swiper-button-prev" type="button" aria-label="Назад"></button>
+            <button class="gallery__btn-next swiper-button-next" type="button" aria-label="Вперед"></button>
           </div>
           <div class="swiper-wrapper">
             <div class="gallery__slide swiper-slide">
@@ -585,7 +594,7 @@
                 <source media="(max-width: 1199px)" srcset="./img/gallery-image-1.jpg, ./img/gallery-image-1@2x.jpg 2x"
                   width="275" height="449">
                 <img src="./img/gallery-image-1.jpg" width="275" height="449" srcset="./img/gallery-image-1@2x.jpg 2x"
-                  alt="Фото из галлереи">
+                  alt="Фото из галереи">
               </picture>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
@@ -598,7 +607,7 @@
                 <source media="(max-width: 1199px)" srcset="./img/gallery-image-2.jpg, ./img/gallery-image-2@2x.jpg 2x"
                   width="298" height="179">
                 <img src="./img/gallery-image-2.jpg" width="298" height="179" srcset="./img/gallery-image-2@2x.jpg 2x"
-                  alt="Фото из галлереи">
+                  alt="Фото из галереи">
               </picture>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
@@ -611,7 +620,7 @@
                 <source media="(max-width: 1199px)" srcset="./img/gallery-image-3.jpg, ./img/gallery-image-3@2x.jpg 2x"
                   width="298" height="265">
                 <img src="./img/gallery-image-3.jpg" width="298" height="265" srcset="./img/gallery-image-3@2x.jpg 2x"
-                  alt="Фото из галлереи">
+                  alt="Фото из галереи">
               </picture>
             </div>
             <div class="gallery__slide swiper-slide">
@@ -626,7 +635,7 @@
                 <source media="(max-width: 1199px)" srcset="./img/gallery-image-4.jpg, ./img/gallery-image-4@2x.jpg 2x"
                   width="272" height="449">
                 <img src="./img/gallery-image-4.jpg" width="272" height="449" srcset="./img/gallery-image-4@2x.jpg 2x"
-                  alt="Фото из галлереи">
+                  alt="Фото из галереи">
               </picture>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
@@ -639,7 +648,7 @@
                 <source media="(max-width: 1199px)" srcset="./img/gallery-image-5.jpg, ./img/gallery-image-5@2x.jpg 2x"
                   width="298" height="179">
                 <img src="./img/gallery-image-5.jpg" width="298" height="179" srcset="./img/gallery-image-5@2x.jpg 2x"
-                  alt="Фото из галлереи">
+                  alt="Фото из галереи">
               </picture>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
@@ -652,7 +661,7 @@
                 <source media="(max-width: 1199px)" srcset="./img/gallery-image-6.jpg, ./img/gallery-image-6@2x.jpg 2x"
                   width="298" height="265">
                 <img src="./img/gallery-image-6.jpg" width="298" height="265" srcset="./img/gallery-image-6@2x.jpg 2x"
-                  alt="Фото из галлереи">
+                  alt="Фото из галереи">
               </picture>
             </div>
             <div class="gallery__slide swiper-slide">
@@ -667,7 +676,7 @@
                 <source media="(max-width: 1199px)" srcset="./img/gallery-image-7.jpg, ./img/gallery-image-7@2x.jpg 2x"
                   width="675" height="450">
                 <img src="./img/gallery-image-7.jpg" width="276" height="449" srcset="./img/gallery-image-7@2x.jpg 2x"
-                  alt="Фото из галлереи">
+                  alt="Фото из галереи">
               </picture>
             </div>
           </div>
@@ -723,28 +732,26 @@
           <use xlink:href="./img/stack.svg#logotype-desktop" />
         </svg>
       </a>
-      <nav class="footer__nav">
-        <ul class="site-navigation__list">
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#hero">Туры</a>
-          </li>
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#training">Обучение</a>
-          </li>
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#about-us">О&nbsp;нас</a>
-          </li>
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#reviews">Отзывы</a>
-          </li>
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#gallery">Фотографии</a>
-          </li>
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="site-navigation">
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="#hero">Туры</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="#training">Обучение</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="#about-us">О&nbsp;нас</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="#gallery">Фотографии</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
       <a class="footer__tel" href="tel:+78007253232">8 800 725 32 32</a>
       <ul class="social-list">
         <li class="social-list__item">
