@@ -2,20 +2,24 @@
   width: 100%;
   position: relative;
   padding: 130px 120px 60px 735px;
+  max-width: 1440px;
 
   h2 {
     @include h2-desktop;
     margin-bottom: 58px;
+    max-width: 1000px;
   }
 
   h3 {
     @include h3-desktop;
     margin-bottom: 16px;
+    max-width: 1000px;
   }
 
   p {
     @include text-small-desktop;
     margin-bottom: 30px;
+    max-width: 1000px;
   }
 
   &::before {
