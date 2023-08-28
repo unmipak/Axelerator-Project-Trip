@@ -1,6 +1,6 @@
 .feedback {
   width: 100%;
-  padding: 310px 231px 307px;
+  padding: 310px 31px 307px;
   background-color: $color-elephant;
   background-image: url("../img/background-feedback.jpg");
   background-repeat: no-repeat;
@@ -101,7 +101,9 @@
   }
 
   .feedback__wrapper form {
-    width: 290px;
+    min-width: 290px;
+    align-items: stretch;
+    width: 100%;
   }
 
   .feedback__btn {

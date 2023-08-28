@@ -78,17 +78,20 @@
   dd {
     @include text-regular-desktop;
     margin: 0;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .contacts__map {
   background-image: url("../img/map.jpg");
+  background-color: $color-elephant;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   grid-column: 2 / 3;
   grid-row: 2 / 4;
-  margin: auto 0 0 auto;
+  margin: 16px 0 0 auto;
   height: fit-content;
 }
 
@@ -100,7 +103,7 @@
 
 @include vp-1199 {
   .contacts {
-    padding: 88px 45px 68px;
+    padding: 87px 45px 68px;
     display: block;
   }
 

@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: auto;
 
   &::before {
     position: absolute;
@@ -72,6 +73,7 @@
 }
 
 .hero__btn {
+  display: none;
   text-align: center;
   margin: 0 auto 150px 0;
   width: 220px;
@@ -130,9 +132,10 @@
 }
 
 .hero__video {
+  display: none;
   position: absolute;
   top: 119px;
-  right: 120px;
+  right: 0;
 
   video {
     position: relative;
@@ -183,6 +186,7 @@
 }
 
 .hero__audio-player {
+  display: none;
   position: absolute;
   top: 120px;
   right: 0;
@@ -191,6 +195,12 @@
   background-position: center;
   width: 340px;
   height: 220px;
+}
+
+.swiper-slide-active .hero__btn,
+.swiper-slide-active .hero__video,
+.swiper-slide-active .hero__audio-player {
+  display: block;
 }
 
 @include vp-1199 {
@@ -276,6 +286,11 @@
     height: 365px;
   }
 
+  .hero__picture {
+    width: 442px;
+    height: 365px;
+  }
+
   .hero__audio-player {
     position: relative;
     top: auto;
@@ -334,8 +349,9 @@
   }
 
   .hero__btn {
-    width: 180px;
-    margin-bottom: 124px;
+    align-self: stretch;
+    width: auto;
+    margin: 0 55px 124px;
     padding: 18px;
   }
 

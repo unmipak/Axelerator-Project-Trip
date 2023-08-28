@@ -1558,6 +1558,7 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 
 .btn:hover,
@@ -1756,7 +1757,7 @@ button,
 
 .header {
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1776,6 +1777,17 @@ button,
   -ms-flex-align: center;
   align-items: center;
   max-width: 1440px;
+}
+
+.header__tel-wrapper {
+  max-width: 142px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .header__tel {
@@ -1837,6 +1849,7 @@ button,
   margin: 0;
   padding: 0;
   gap: 22px;
+  max-width: 585px;
 }
 
 .header__nav-link {
@@ -1877,6 +1890,7 @@ button,
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: auto;
 }
 
 .hero__slide::before {
@@ -1933,6 +1947,7 @@ button,
 }
 
 .hero__btn {
+  display: none;
   text-align: center;
   margin: 0 auto 150px 0;
   width: 220px;
@@ -1998,9 +2013,10 @@ button,
 }
 
 .hero__video {
+  display: none;
   position: absolute;
   top: 119px;
-  right: 120px;
+  right: 0;
 }
 
 .hero__video video {
@@ -2054,6 +2070,7 @@ button,
 }
 
 .hero__audio-player {
+  display: none;
   position: absolute;
   top: 120px;
   right: 0;
@@ -2062,6 +2079,12 @@ button,
   background-position: center;
   width: 340px;
   height: 220px;
+}
+
+.swiper-slide-active .hero__btn,
+.swiper-slide-active .hero__video,
+.swiper-slide-active .hero__audio-player {
+  display: block;
 }
 
 .tours {
@@ -2137,8 +2160,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -2146,8 +2167,8 @@ button,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  height: 412px;
-  overflow-y: auto;
+  min-height: 412px;
+  height: auto;
 }
 
 .tours__slide h3 {
@@ -2187,8 +2208,10 @@ button,
   content: "";
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(61.9%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 61.9%, rgba(0, 0, 0, 0) 100%);
+  background-image: url("../img/overlay.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   top: 0;
   left: 0;
 }
@@ -2196,7 +2219,6 @@ button,
 .tours__info {
   width: 100%;
   padding: 0 20px;
-  margin: 0;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2434,6 +2456,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .tours__btn-next:hover,
@@ -2483,6 +2507,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .tours__btn-prev:hover,
@@ -2693,6 +2719,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .instructors__btn-next:hover,
@@ -2742,6 +2770,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .instructors__btn-prev:hover,
@@ -2791,15 +2821,14 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  overflow-y: auto;
   max-width: 278px;
-  height: 377px;
+  min-height: 377px;
+  height: auto;
 }
 
 .instructors__slide img {
   -o-object-fit: cover;
   object-fit: cover;
-  min-height: 212px;
 }
 
 .instructors__slide h4 {
@@ -2887,7 +2916,6 @@ button,
   width: 100%;
   position: relative;
   padding: 130px 120px 60px 735px;
-  max-width: 1440px;
 }
 
 .about-us h2 {
@@ -2957,11 +2985,16 @@ button,
   width: 808px;
   height: 474px;
   background-image: url("../img/background-about-us-desktop.png");
-  background-color: #ffffff;
+  background-color: rgba(15, 20, 41, 0.33);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
+}
+
+.about-us__wrapper {
+  max-width: 585px;
+  margin: 0 auto;
 }
 
 .advantages {
@@ -3010,6 +3043,7 @@ button,
   top: -36px;
   right: -184px;
   background-image: url("../img/clouds-decoration.png");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -3029,13 +3063,14 @@ button,
 
 .advantages__slider {
   position: relative;
-  max-width: 1440px;
+  max-width: 2020px;
 }
 
 .advantages__slide {
   position: relative;
   min-width: 380px;
   min-height: 329px;
+  height: auto;
   padding: 40px 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -3137,6 +3172,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .advantages__btn-next:hover,
@@ -3186,6 +3223,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .advantages__btn-prev:hover,
@@ -3327,6 +3366,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .gallery__btn-next:hover,
@@ -3376,6 +3417,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .gallery__btn-prev:hover,
@@ -3410,7 +3453,6 @@ button,
   width: 100%;
   background-color: #ffffff;
   padding: 0 0 88px 90px;
-  max-width: 1440px;
 }
 
 .reviews h2 {
@@ -3449,12 +3491,14 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  max-width: 1610px;
 }
 
 .reviews__slide {
   overflow-y: auto;
   max-width: 790px;
-  height: 293px;
+  min-height: 293px;
+  height: auto;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3545,6 +3589,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .reviews__btn-next:hover,
@@ -3594,6 +3640,8 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .reviews__btn-prev:hover,
@@ -3626,7 +3674,7 @@ button,
 
 .feedback {
   width: 100%;
-  padding: 310px 231px 307px;
+  padding: 310px 31px 307px;
   background-color: #2d383f;
   background-image: url("../img/background-feedback.jpg");
   background-repeat: no-repeat;
@@ -3835,10 +3883,18 @@ button,
   line-height: 24px;
   margin: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .contacts__map {
   background-image: url("../img/map.jpg");
+  background-color: #2d383f;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -3848,7 +3904,7 @@ button,
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   grid-row: 2/4;
-  margin: auto 0 0 auto;
+  margin: 16px 0 0 auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -4038,6 +4094,12 @@ button,
   }
 }
 
+@media (max-width: 1397px) {
+  .instructors {
+    max-width: 924px;
+  }
+}
+
 @media (max-width: 1239px) {
   .site-navigation {
     width: 600px;
@@ -4076,13 +4138,28 @@ button,
     background-image: url("../img/clouds-tablet.png");
   }
 
+  .wrapper-overlay {
+    position: relative;
+  }
+
+  .wrapper-overlay--menu-opened::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+
   .site-navigation {
     -ms-flex-item-align: start;
     align-self: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 12px;
+    gap: 11px;
     width: 483px;
     padding: 0;
     margin-top: 6px;
@@ -4114,10 +4191,13 @@ button,
     height: 44px;
   }
 
-  .header__tel {
+  .header__tel-wrapper {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
+  }
+
+  .header__tel {
     font-size: 16px;
   }
 
@@ -4154,7 +4234,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 26px;
+    gap: 18px;
   }
 
   .header__nav--opened .header__nav-link {
@@ -4189,7 +4269,8 @@ button,
     width: 22px;
     height: 22px;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    margin-left: 5px;
     background-image: url("../img/stack.svg#cross-default");
   }
 
@@ -4212,7 +4293,7 @@ button,
     -ms-flex-align: start;
     align-items: flex-start;
     background: #ffffff;
-    padding: 30px 45px 70px;
+    padding: 30px 45px 64px 40px;
   }
 
   .header--white .header__tel {
@@ -4221,7 +4302,7 @@ button,
   }
 
   .header--white .header__logo {
-    margin-left: 0;
+    margin-left: -10px;
   }
 
   .header--white .header__logo svg {
@@ -4309,6 +4390,11 @@ button,
     top: auto;
     right: auto;
     margin: 34px auto 169px;
+    width: 442px;
+    height: 365px;
+  }
+
+  .hero__picture {
     width: 442px;
     height: 365px;
   }
@@ -4463,6 +4549,12 @@ button,
     line-height: 22px;
     margin: 0;
     margin: 0;
+    padding-left: 31px;
+  }
+
+  .training__item p::before {
+    width: 19px;
+    height: 19px;
   }
 
   .training__item:nth-of-type(3) {
@@ -4525,7 +4617,7 @@ button,
   }
 
   .instructors {
-    max-width: 100%;
+    max-width: 738px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -4533,7 +4625,7 @@ button,
 
   .instructors__slide {
     padding: 15px;
-    height: 411px;
+    min-height: 411px;
     max-width: 206px;
   }
 
@@ -4633,7 +4725,7 @@ button,
     line-height: 100%;
     margin: 0;
     margin-top: 20px;
-    margin-bottom: 46px;
+    margin-bottom: 48px;
   }
 
   .advantages h2::before {
@@ -4753,7 +4845,7 @@ button,
     font-size: 25px;
     line-height: 100%;
     margin: 0;
-    margin: 30px 0 30px 30px;
+    margin: 30px 0 28px 30px;
     max-width: 50%;
   }
 
@@ -4774,7 +4866,7 @@ button,
   .reviews__slide {
     max-width: 560px;
     padding: 18px 30px 20px 20px;
-    height: 277px;
+    min-height: 277px;
   }
 
   .reviews__slide img {
@@ -4861,7 +4953,7 @@ button,
   }
 
   .contacts {
-    padding: 88px 45px 68px;
+    padding: 87px 45px 68px;
     display: block;
   }
 
@@ -5056,6 +5148,11 @@ button,
     margin-left: auto;
   }
 
+  .header__tel-wrapper {
+    max-width: none;
+    width: 100%;
+  }
+
   .header__tel {
     max-width: none;
     width: 100%;
@@ -5064,8 +5161,7 @@ button,
   }
 
   .header--white {
-    padding: 15px 15px 70px 10px;
-    position: relative;
+    padding: 15px 15px 45px 10px;
   }
 
   .header__nav--opened .header__nav-list {
@@ -5083,11 +5179,15 @@ button,
     margin: 0 0 57px 5px;
   }
 
-  .header--white .header__tel {
+  .header--white .header__tel-wrapper {
     position: absolute;
     right: 15px;
     top: 55px;
     width: 110px;
+    margin: 0;
+  }
+
+  .header--white .header__tel {
     margin: 0;
   }
 
@@ -5131,8 +5231,11 @@ button,
   }
 
   .hero__btn {
-    width: 180px;
-    margin-bottom: 124px;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+    width: auto;
+    margin: 0 55px 124px;
     padding: 18px;
   }
 
@@ -5183,7 +5286,12 @@ button,
   }
 
   .tours__slider {
-    max-width: 290px;
+    max-width: 100%;
+  }
+
+  .tours__slide {
+    max-width: none;
+    width: 100%;
   }
 
   .tours__info {
@@ -5194,6 +5302,10 @@ button,
     -moz-column-gap: 14px;
     column-gap: 14px;
     row-gap: 19px;
+  }
+
+  .tours__picture {
+    width: 100%;
   }
 
   .tours__days,
@@ -5324,7 +5436,7 @@ button,
   }
 
   .training__item {
-    padding: 0 0 0 32px;
+    padding: 0 0 0 34px;
     max-width: none;
   }
 
@@ -5334,6 +5446,15 @@ button,
     line-height: 18px;
     margin: 0;
     margin: 0;
+  }
+
+  .training__item:nth-of-type(1),
+  .training__item:nth-of-type(2),
+  .training__item:nth-of-type(3),
+  .training__item:nth-of-type(4) {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
   }
 
   .training__item::after,
@@ -5352,7 +5473,7 @@ button,
   }
 
   .instructors {
-    max-width: 290px;
+    max-width: 100%;
   }
 
   .instructors h3 {
@@ -5372,8 +5493,9 @@ button,
 
   .instructors__slide {
     padding: 20px;
-    height: 385px;
-    max-width: 290px;
+    min-height: 385px;
+    max-width: none;
+    width: 100%;
     margin: 0;
   }
 
@@ -5453,7 +5575,7 @@ button,
   }
 
   .advantages {
-    padding: 0 15px 20px;
+    padding: 0 15px 22px;
   }
 
   .advantages h2 {
@@ -5488,6 +5610,8 @@ button,
 
   .advantages__slide {
     padding: 19px 10px;
+    max-width: none;
+    width: 100%;
   }
 
   .advantages__slide h3 {
@@ -5562,7 +5686,7 @@ button,
   }
 
   .reviews {
-    padding: 0 0 38px;
+    padding: 0 0 16px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -5574,7 +5698,7 @@ button,
     font-size: 22px;
     line-height: 100%;
     margin: 0;
-    margin: 30px 15px 33px;
+    margin: 30px 0 33px;
   }
 
   .reviews h2::before {
@@ -5592,11 +5716,12 @@ button,
   }
 
   .reviews__btn-wrapper {
-    margin: 0 0 10px 15px;
+    margin: 0 0 10px 0;
   }
 
   .reviews__slider {
-    max-width: 320px;
+    max-width: 100%;
+    margin: 0 15px;
   }
 
   .reviews__slide {
@@ -5604,19 +5729,20 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    max-width: 290px;
+    width: 100%;
     padding: 20px;
-    height: 466px;
-    margin: 0 15px 30px;
+    min-height: 466px;
+    height: auto;
+    margin: 0 0 30px;
   }
 
   .reviews__slide img {
-    width: 250px;
+    width: 100%;
   }
 
   .reviews__info {
-    width: auto;
     padding: 20px 0 0;
+    width: auto;
   }
 
   .reviews__info h3 {
@@ -5666,7 +5792,11 @@ button,
   }
 
   .feedback__wrapper form {
-    width: 290px;
+    min-width: 290px;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
   }
 
   .feedback__btn {

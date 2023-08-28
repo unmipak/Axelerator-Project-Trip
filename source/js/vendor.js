@@ -17,7 +17,7 @@ const sliderHero = new Swiper('.hero', {
 });
 
 const sliderTours = new Swiper('.tours__slider', {
-  loop: true,
+  loop: false,
   navigation: {
     prevEl: '.tours__btn-prev',
     nextEl: '.tours__btn-next',
@@ -51,6 +51,9 @@ const sliderInstructors = new Swiper('.instructors', {
       slidesPerView: 3,
     },
     1200: {
+      slidesPerView: 3,
+    },
+    1400: {
       slidesPerView: 4,
     },
   },
@@ -80,9 +83,9 @@ const sliderReviews = new Swiper('.reviews__slider', {
 });
 
 const sliderAdvantages = new Swiper('.advantages__slider', {
+  loop: true,
   breakpoints: {
     1200: {
-      loop: true,
       navigation: {
         prevEl: '.advantages__btn-prev',
         nextEl: '.advantages__btn-next',

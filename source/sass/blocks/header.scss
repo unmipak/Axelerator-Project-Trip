@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -11,6 +11,12 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1440px;
+}
+
+.header__tel-wrapper {
+  max-width: 142px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__tel {
@@ -69,6 +75,7 @@
   margin: 0;
   padding: 0;
   gap: 22px;
+  max-width: 585px;
 }
 
 .header__nav-link {
@@ -117,8 +124,11 @@
     height: 44px;
   }
 
-  .header__tel {
+  .header__tel-wrapper {
     order: 2;
+  }
+
+  .header__tel {
     font-size: 16px;
   }
 
@@ -150,7 +160,7 @@
   .header__nav--opened .header__nav-list {
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 18px;
   }
 
   .header__nav--opened .header__nav-link {
@@ -185,7 +195,8 @@
     width: 22px;
     height: 22px;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    margin-left: 5px;
     background-image: url("../img/stack.svg#cross-default");
 
     &:hover,
@@ -206,7 +217,7 @@
   .header--white {
     align-items: flex-start;
     background: $color-default-white;
-    padding: 30px 45px 70px;
+    padding: 30px 45px 64px 40px;
   }
 
   .header--white .header__tel {
@@ -215,7 +226,7 @@
   }
 
   .header--white .header__logo {
-    margin-left: 0;
+    margin-left: -10px;
   }
 
   .header--white .header__logo svg {
@@ -241,6 +252,11 @@
     margin-left: auto;
   }
 
+  .header__tel-wrapper {
+    max-width: none;
+    width: 100%;
+  }
+
   .header__tel {
     max-width: none;
     width: 100%;
@@ -249,8 +265,7 @@
   }
 
   .header--white {
-    padding: 15px 15px 70px 10px;
-    position: relative;
+    padding: 15px 15px 45px 10px;
   }
 
   .header__nav--opened .header__nav-list {
@@ -263,11 +278,15 @@
     margin: 0 0 57px 5px;
   }
 
-  .header--white .header__tel {
+  .header--white .header__tel-wrapper {
     position: absolute;
     right: 15px;
     top: 55px;
     width: 110px;
+    margin: 0;
+  }
+
+  .header--white .header__tel {
     margin: 0;
   }
 

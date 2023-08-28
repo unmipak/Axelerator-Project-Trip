@@ -6,6 +6,12 @@
   }
 }
 
+@mixin vp-1399 {
+  @media (max-width: ($vp-1398 - 1px)) {
+    @content;
+  }
+}
+
 @mixin vp-1239 {
   @media (max-width: ($vp-1240 - 1px)) {
     @content;
@@ -269,6 +275,8 @@
     height: 8px;
     background-image: url("../img/stack.svg#arrow-right");
     background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
   }
 
   &:hover,
@@ -314,6 +322,8 @@
     height: 8px;
     background-image: url("../img/stack.svg#arrow-left");
     background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
   }
 
   &:hover,

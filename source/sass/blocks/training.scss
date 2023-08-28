@@ -151,7 +151,14 @@
   .training__item p {
     @include text-small-tablet;
     margin: 0;
+    padding-left: 31px;
   }
+
+  .training__item p::before {
+    width: 19px;
+    height: 19px;
+  }
+
 
   .training__item:nth-of-type(3) {
     order: 1;
@@ -252,13 +259,20 @@
   }
 
   .training__item {
-    padding: 0 0 0 32px;
+    padding: 0 0 0 34px;
     max-width: none;
   }
 
   .training__item p {
     @include text-small-mobile;
     margin: 0;
+  }
+
+  .training__item:nth-of-type(1),
+  .training__item:nth-of-type(2),
+  .training__item:nth-of-type(3),
+  .training__item:nth-of-type(4) {
+    order: 0;
   }
 
   .training__item::after,
