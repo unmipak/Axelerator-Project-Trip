@@ -56,10 +56,6 @@
   height: auto;
   margin-bottom: 30px;
 
-  img {
-    object-fit: cover;
-  }
-
   h4 {
     @include h4-desktop;
     margin: 16px 0 14px;
@@ -81,6 +77,11 @@
     @include text-xsmall-desktop;
     width: 100%;
   }
+}
+
+.instructors__picture {
+  object-fit: cover;
+  background-color: $color-elephant;
 }
 
 .instructors__wrapper {
@@ -118,7 +119,6 @@
 
   .instructors__btn-wrapper {
     margin: 0;
-    margin-right: 30px;
   }
 
   .instructors__slide picture {

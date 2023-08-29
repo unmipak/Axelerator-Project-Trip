@@ -16,13 +16,17 @@
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
+
+  img {
+    background-color: $color-elephant;
+  }
 }
 
 .reviews__slide {
   overflow-y: auto;
   max-width: 790px;
   min-height: 293px;
-  height: 100%;
+  height: auto;
   padding: 20px;
   display: flex;
   column-gap: 30px;
@@ -42,7 +46,6 @@
   p {
     @include text-small-desktop;
     width: 100%;
-    flex-grow: 1;
   }
 
   span {
@@ -54,7 +57,7 @@
     font-family: "Montserrat Bold", "Arial", sans-serif;
     font-size: 13px;
     line-height: 100%;
-    margin: 0 0 8px;
+    margin: 24px 0 8px;
     color: $color-elephant;
   }
 
@@ -64,6 +67,7 @@
     line-height: 100%;
     margin: 0;
     color: $color-elephant;
+    flex-grow: 1;
   }
 }
 
@@ -125,7 +129,7 @@
 
   .reviews h3 {
     font-size: 12px;
-    margin: 0 0 8px;
+    margin: 25px 0 8px;
   }
 
   .reviews h4 {
@@ -176,7 +180,7 @@
   }
 
   .reviews__info h3 {
-    margin-bottom: 8px;
+    margin: 0 0 8px;
   }
 
   .reviews__info h4 {

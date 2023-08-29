@@ -33,6 +33,8 @@
 
 .footer__tel-wrapper {
   max-width: 150px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__tel {

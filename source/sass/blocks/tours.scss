@@ -62,16 +62,6 @@
     }
   }
 
-  img {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    object-fit: cover;
-  }
-
   &::after {
     position: absolute;
     content: "";
@@ -86,6 +76,17 @@
   }
 }
 
+.tours__picture {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  object-fit: cover;
+  background-color: $color-elephant;
+}
+
 .tours__info {
   margin: 0;
   width: 100%;
@@ -95,7 +96,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  column-gap: 30px;
+  column-gap: 1px;
   row-gap: 17px;
   z-index: 1;
 
