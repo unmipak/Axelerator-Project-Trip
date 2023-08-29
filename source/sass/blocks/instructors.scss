@@ -8,7 +8,7 @@
 
   h3 {
     @include h3-desktop;
-    margin: 58px auto 44px 30px;
+    margin: 58px auto 44px 0;
   }
 }
 
@@ -16,7 +16,6 @@
   display: flex;
   gap: 4px;
   max-width: 78px;
-  margin-right: 16px;
   margin-top: 10px;
 }
 
@@ -25,6 +24,11 @@
   position: relative;
   top: auto;
   right: auto;
+  display: flex;
+
+  &::after {
+    display: block;
+  }
 }
 
 .instructors__btn-prev {
@@ -32,6 +36,11 @@
   position: relative;
   top: auto;
   left: auto;
+  display: flex;
+
+  &::after {
+    display: block;
+  }
 }
 
 .instructors__slide {
@@ -39,14 +48,13 @@
   padding: 16px 20px 20px;
   background: $color-default-white;
   box-shadow: 0 0 30px rgba(28, 51, 116, 0.1);
-  margin-left: 30px;
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 278px;
   min-height: 377px;
   height: auto;
+  margin-bottom: 30px;
 
   img {
     object-fit: cover;
@@ -83,27 +91,21 @@
   width: 100%;
 }
 
-@include vp-1399 {
-  .instructors {
-    max-width: 924px;
-  }
-}
-
 @include vp-1199 {
   .instructors {
-    max-width: 738px;
+    max-width: 100%;
     align-items: flex-start;
   }
 
   .instructors__slide {
     padding: 15px;
     min-height: 411px;
-    max-width: 206px;
+    max-width: none;
   }
 
   .instructors h3 {
     @include h3-tablet;
-    margin: 10px 0 32px 30px;
+    margin: 10px 0 32px;
   }
 
   .instructors__slide h4 {
@@ -117,6 +119,14 @@
   .instructors__btn-wrapper {
     margin: 0;
     margin-right: 30px;
+  }
+
+  .instructors__slide picture {
+    width: 100%;
+  }
+
+  .instructors__picture {
+    width: 100%;
   }
 }
 
@@ -142,14 +152,6 @@
     max-width: none;
     width: 100%;
     margin: 0;
-  }
-
-  .instructors__slide picture {
-    width: 100%;
-  }
-
-  .instructors__picture {
-    width: 100%;
   }
 
   .instructors__link {
