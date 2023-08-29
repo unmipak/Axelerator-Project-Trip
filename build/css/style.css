@@ -3525,7 +3525,7 @@ button,
   overflow-y: auto;
   max-width: 790px;
   min-height: 293px;
-  height: auto;
+  height: 100%;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
