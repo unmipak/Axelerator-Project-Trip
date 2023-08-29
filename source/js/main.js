@@ -5,7 +5,7 @@ import {Form} from './modules/form-validate/form';
 // открытие и закрытие меню
 
 let navMenu = document.querySelector('.header__nav');
-let navLink = document.querySelector('.header__nav-link');
+let navList = document.querySelector('.header__nav-list');
 let header = document.querySelector('.header');
 let navBtn = document.querySelector('.header__nav-btn');
 let overlay = document.querySelector('.wrapper-overlay');
@@ -27,7 +27,7 @@ navBtn.addEventListener('click', function () {
   }
 });
 
-navLink.addEventListener('click', function () {
+navList.addEventListener('click', function () {
   if (navMenu.classList.contains('header__nav--opened')) {
     navMenu.classList.add('header__nav--closed');
     navMenu.classList.remove('header__nav--opened');
