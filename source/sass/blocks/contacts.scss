@@ -73,6 +73,10 @@
     line-height: 100%;
     margin: 0;
     color: $color-elephant;
+
+    a {
+      width: fit-content;
+    }
   }
 
   dd {
@@ -80,6 +84,10 @@
     margin: 0;
     display: flex;
     flex-direction: column;
+
+    a {
+      width: fit-content;
+    }
   }
 }
 

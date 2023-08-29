@@ -5,6 +5,7 @@ import {Form} from './modules/form-validate/form';
 // открытие и закрытие меню
 
 let navMenu = document.querySelector('.header__nav');
+let navLink = document.querySelector('.header__nav-link');
 let header = document.querySelector('.header');
 let navBtn = document.querySelector('.header__nav-btn');
 let overlay = document.querySelector('.wrapper-overlay');
@@ -19,6 +20,24 @@ navBtn.addEventListener('click', function () {
     header.classList.add('header--white');
     overlay.classList.add('wrapper-overlay--menu-opened');
   } else {
+    navMenu.classList.add('header__nav--closed');
+    navMenu.classList.remove('header__nav--opened');
+    header.classList.remove('header--white');
+    overlay.classList.remove('wrapper-overlay--menu-opened');
+  }
+});
+
+navLink.addEventListener('click', function () {
+  if (navMenu.classList.contains('header__nav--opened')) {
+    navMenu.classList.add('header__nav--closed');
+    navMenu.classList.remove('header__nav--opened');
+    header.classList.remove('header--white');
+    overlay.classList.remove('wrapper-overlay--menu-opened');
+  }
+});
+
+overlay.addEventListener('click', function () {
+  if (navMenu.classList.contains('header__nav--opened')) {
     navMenu.classList.add('header__nav--closed');
     navMenu.classList.remove('header__nav--opened');
     header.classList.remove('header--white');

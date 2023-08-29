@@ -69,6 +69,7 @@
     left: 0;
     z-index: -1;
     height: 100%;
+    object-fit: cover;
   }
 
   &::after {
@@ -86,6 +87,7 @@
 }
 
 .tours__info {
+  margin: 0;
   width: 100%;
   padding: 0 20px;
   list-style-type: none;
@@ -284,19 +286,29 @@
 }
 
 .tours__btn-next {
+  display: flex;
   position: relative;
   top: auto;
   right: auto;
 
   @include btn-next;
+
+  &::after {
+    display: block;
+  }
 }
 
 .tours__btn-prev {
+  display: flex;
   position: relative;
   top: auto;
   left: auto;
 
   @include btn-prev;
+
+  &::after {
+    display: block;
+  }
 }
 
 @include vp-1199 {
@@ -329,6 +341,7 @@
 
   .tours__info {
     gap: 10px;
+    padding: 0 20px 0;
   }
 
   .tours__location {
@@ -343,7 +356,7 @@
 
   .tours__link {
     text-align: center;
-    margin: 52px auto 0;
+    margin: 53px auto 0;
   }
 }
 

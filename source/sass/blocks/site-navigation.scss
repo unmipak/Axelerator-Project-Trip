@@ -43,6 +43,8 @@
 
 @include vp-1199 {
   .site-navigation {
+    margin-left: auto;
+    margin-right: -2px;
     align-self: flex-start;
     align-items: center;
     gap: 11px;

@@ -1710,6 +1710,7 @@ button,
   top: 782px;
   right: 0;
   background-image: url("../img/clouds-desktop.png");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2201,6 +2202,8 @@ button,
   left: 0;
   z-index: -1;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .tours__slide::after {
@@ -2217,6 +2220,7 @@ button,
 }
 
 .tours__info {
+  margin: 0;
   width: 100%;
   padding: 0 20px;
   list-style-type: none;
@@ -2438,6 +2442,9 @@ button,
 }
 
 .tours__btn-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   top: auto;
   right: auto;
@@ -2456,7 +2463,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -2488,7 +2495,14 @@ button,
   background-repeat: no-repeat;
 }
 
+.tours__btn-next::after {
+  display: block;
+}
+
 .tours__btn-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   top: auto;
   left: auto;
@@ -2507,7 +2521,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -2537,6 +2551,10 @@ button,
 .tours__btn-prev:disabled::after {
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
+}
+
+.tours__btn-prev::after {
+  display: block;
 }
 
 .training {
@@ -2719,7 +2737,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -2770,7 +2788,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -3057,6 +3075,8 @@ button,
   top: -220px;
   left: -456px;
   background-image: url("../img/clouds-decoration.png");
+  background-color: #ffffff;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
@@ -3172,7 +3192,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -3223,7 +3243,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -3366,7 +3386,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -3417,7 +3437,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -3491,7 +3511,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 1610px;
+  max-width: 100%;
 }
 
 .reviews__slide {
@@ -3589,7 +3609,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-right");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -3640,7 +3660,7 @@ button,
   height: 8px;
   background-image: url("../img/stack.svg#arrow-left");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -3877,6 +3897,12 @@ button,
   color: #2d383f;
 }
 
+.contacts__item dt a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .contacts__item dd {
   font-family: "Montserrat Regular", "Arial", sans-serif;
   font-size: 16px;
@@ -3890,6 +3916,12 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.contacts__item dd a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .contacts__map {
@@ -3954,6 +3986,10 @@ button,
 
 .footer__logo:active svg {
   fill: #0266c1;
+}
+
+.footer__tel-wrapper {
+  max-width: 150px;
 }
 
 .footer__tel {
@@ -4142,6 +4178,11 @@ button,
     position: relative;
   }
 
+  .wrapper-overlay--menu-opened {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
   .wrapper-overlay--menu-opened::before {
     position: absolute;
     content: "";
@@ -4154,6 +4195,8 @@ button,
   }
 
   .site-navigation {
+    margin-left: auto;
+    margin-right: -2px;
     -ms-flex-item-align: start;
     align-self: flex-start;
     -webkit-box-align: center;
@@ -4369,7 +4412,7 @@ button,
     position: relative;
     top: auto;
     right: auto;
-    margin: 50px auto auto;
+    margin: 50px auto 217px;
   }
 
   .hero__video video {
@@ -4460,6 +4503,7 @@ button,
 
   .tours__info {
     gap: 10px;
+    padding: 0 20px 0;
   }
 
   .tours__location {
@@ -4474,7 +4518,7 @@ button,
 
   .tours__link {
     text-align: center;
-    margin: 52px auto 0;
+    margin: 53px auto 0;
   }
 
   .training {
@@ -4526,9 +4570,9 @@ button,
     display: grid;
     -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
-    -webkit-column-gap: 136px;
-    -moz-column-gap: 136px;
-    column-gap: 136px;
+    -webkit-column-gap: 134px;
+    -moz-column-gap: 134px;
+    column-gap: 134px;
     row-gap: 56px;
     max-width: 100%;
     -webkit-box-pack: start;
@@ -4549,12 +4593,7 @@ button,
     line-height: 22px;
     margin: 0;
     margin: 0;
-    padding-left: 31px;
-  }
-
-  .training__item p::before {
-    width: 19px;
-    height: 19px;
+    padding-left: 41px;
   }
 
   .training__item:nth-of-type(3) {
@@ -5235,13 +5274,15 @@ button,
     -ms-grid-row-align: stretch;
     align-self: stretch;
     width: auto;
-    margin: 0 55px 124px;
+    margin: 0 55px 144px;
     padding: 18px;
   }
 
   .hero__video,
   .hero__photos,
-  .hero__audio-player {
+  .hero__audio-player,
+  .swiper-slide-active .hero__video,
+  .swiper-slide-active .hero__audio-player {
     display: none;
   }
 
@@ -5403,7 +5444,7 @@ button,
     line-height: 100%;
     margin: 0;
     color: #2d383f;
-    margin: 37px 0 30px;
+    margin: 37px 0 29px;
   }
 
   .training__list {
@@ -5420,6 +5461,11 @@ button,
     gap: 25px;
     position: relative;
     padding-bottom: 16px;
+  }
+
+  .training__item p::before {
+    width: 19px;
+    height: 19px;
   }
 
   .training__list::before {
@@ -5446,6 +5492,7 @@ button,
     line-height: 18px;
     margin: 0;
     margin: 0;
+    padding-left: 32px;
   }
 
   .training__item:nth-of-type(1),
@@ -5499,8 +5546,12 @@ button,
     margin: 0;
   }
 
+  .instructors__slide picture {
+    width: 100%;
+  }
+
   .instructors__picture {
-    width: 250px;
+    width: 100%;
   }
 
   .instructors__link {

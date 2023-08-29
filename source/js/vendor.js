@@ -70,12 +70,17 @@ const sliderReviews = new Swiper('.reviews__slider', {
       slidesPerView: 1,
     },
     768: {
-      slidesPerView: 1.3,
+      slidesPerView: 1.1,
       centerInsufficientSlides: true,
       freeMode: true,
     },
     1200: {
       slidesPerView: 1.5,
+      centerInsufficientSlides: true,
+      freeMode: true,
+    },
+    2000: {
+      slidesPerView: 2,
       centerInsufficientSlides: true,
       freeMode: true,
     },
@@ -91,6 +96,16 @@ const sliderAdvantages = new Swiper('.advantages__slider', {
         nextEl: '.advantages__btn-next',
       },
       slidesPerView: 3.8,
+      spaceBetween: 30,
+      centerSlides: true,
+      freeMode: true,
+    },
+    2000: {
+      navigation: {
+        prevEl: '.advantages__btn-prev',
+        nextEl: '.advantages__btn-next',
+      },
+      slidesPerView: 4,
       spaceBetween: 30,
       centerSlides: true,
       freeMode: true,

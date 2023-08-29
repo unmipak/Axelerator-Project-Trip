@@ -3,6 +3,11 @@
     position: relative;
   }
 
+  .wrapper-overlay--menu-opened {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
   .wrapper-overlay--menu-opened::before {
     position: absolute;
     content: "";

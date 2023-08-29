@@ -261,7 +261,7 @@
     position: relative;
     top: auto;
     right: auto;
-    margin: 50px auto auto;
+    margin: 50px auto 217px;
   }
 
   .hero__video video {
@@ -351,13 +351,15 @@
   .hero__btn {
     align-self: stretch;
     width: auto;
-    margin: 0 55px 124px;
+    margin: 0 55px 144px;
     padding: 18px;
   }
 
   .hero__video,
   .hero__photos,
-  .hero__audio-player {
+  .hero__audio-player,
+  .swiper-slide-active .hero__video,
+  .swiper-slide-active .hero__audio-player {
     display: none;
   }
 }

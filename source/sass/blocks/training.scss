@@ -135,7 +135,7 @@
   .training__list {
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 136px;
+    column-gap: 134px;
     row-gap: 56px;
     max-width: 100%;
     justify-content: start;
@@ -151,14 +151,8 @@
   .training__item p {
     @include text-small-tablet;
     margin: 0;
-    padding-left: 31px;
+    padding-left: 41px;
   }
-
-  .training__item p::before {
-    width: 19px;
-    height: 19px;
-  }
-
 
   .training__item:nth-of-type(3) {
     order: 1;
@@ -235,7 +229,7 @@
 
   .training__process h3 {
     @include h3-mobile;
-    margin: 37px 0 30px;
+    margin: 37px 0 29px;
   }
 
   .training__list {
@@ -245,6 +239,11 @@
     gap: 25px;
     position: relative;
     padding-bottom: 16px;
+  }
+
+  .training__item p::before {
+    width: 19px;
+    height: 19px;
   }
 
   .training__list::before {
@@ -266,6 +265,7 @@
   .training__item p {
     @include text-small-mobile;
     margin: 0;
+    padding-left: 32px;
   }
 
   .training__item:nth-of-type(1),
