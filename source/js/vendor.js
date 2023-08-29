@@ -25,6 +25,7 @@ const sliderTours = new Swiper('.tours__slider', {
   breakpoints: {
     320: {
       slidesPerView: 1,
+      spaceBetween: 0,
     },
     768: {
       slidesPerView: 2,
