@@ -129,5 +129,5 @@ function heightChecker() {
     });
   }
 }
-
+window.addEventListener('DOMContentLoaded', heightChecker);
 window.addEventListener('resize', heightChecker);
