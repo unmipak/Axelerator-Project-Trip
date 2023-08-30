@@ -65,12 +65,13 @@ let video = document.querySelector('video');
 let videoBtn = document.querySelector('.hero__video-btn');
 let mobilePoster = 'img/video-tablet.jpg';
 let defaultPoster = 'img/video-desktop.jpg';
-let breakpoint = window.matchMedia('(max-width:767px)');
+let breakpointMobile = window.matchMedia('(max-width:767px)');
+let breakpointTablet = window.matchMedia('(max-width:1199px)');
 let slide = document.querySelector('.hero__slide');
 let pagination = document.querySelector('.hero__pagination');
 
 function breakpointChecker() {
-  if (breakpoint.matches) {
+  if (breakpointMobile.matches) {
     video.setAttribute('poster', mobilePoster);
   } else {
     video.setAttribute('poster', defaultPoster);
@@ -103,3 +104,30 @@ pagination.addEventListener('click', activeSlideChecker);
 video.addEventListener('click', videoOnclick);
 videoBtn.addEventListener('click', videoBtnOnclick);
 window.addEventListener('resize', breakpointChecker);
+
+// высота шапки
+
+let slides = document.querySelectorAll('.hero__slide');
+
+function heightChecker() {
+  let headerHeight = header.offsetHeight;
+  let newPaddingTopMobile = headerHeight + 40 + 'px';
+  let newPaddingTopTablet = headerHeight + 70 + 'px';
+  let newPaddingTopDesktop = headerHeight + 80 + 'px';
+
+  if (breakpointMobile.matches) {
+    slides.forEach((element) => {
+      element.style.setProperty('padding-top', newPaddingTopMobile);
+    });
+  } if (breakpointTablet.matches) {
+    slides.forEach((element) => {
+      element.style.setProperty('padding-top', newPaddingTopTablet);
+    });
+  } else {
+    slides.forEach((element) => {
+      element.style.setProperty('padding-top', newPaddingTopDesktop);
+    });
+  }
+}
+
+window.addEventListener('resize', heightChecker);
